@@ -50,3 +50,16 @@ BOOT0 has a resistor to ground plus a push button to VDD, so it is low by defaul
   {0x10, cmd, 0x11, data} for the first byte and over the byte alone for later bytes).
   Any future driver must append/check CRCs, including on writes.
 - Results live in `g_bms_dbg` (raw bytes + status per register), readable over SWD.
+
+## DSG investigation, step 1 (read-only direct commands) - 2026-11-07
+- Probe extended with SafetyAlert A/B/C, AlarmStatus/RawStatus/Enable and FETStatus (0x7F);
+  `g_bms_dbg` is now self-describing (cmd, len, status, raw per record) and
+  `tools/read_bms_csv.py` sizes itself from the ELF.
+- FETStatus read 0x30: bits 0-3 (CHG, PCHG, DSG, PDSG) all 0 = the BQ is not turning on DSG
+  or CHG. Bits 4-5 are set; their meaning is not defined in any file in this repo.
+- Safety alert/status A/B/C all 0.
+- NOT done: reading data memory (FET Options 0x9308, DSG FET Protections 0x9269-0x926B,
+  DFETOFF/CFETOFF pin config 0x92FB/0x92FA, Manufacturing Status subcommand 0x0057). These need
+  writes to 0x3E/0x3F, and possibly an unseal; waiting for the owner's go-ahead.
+- `bq76952-main/` is write-heavy (it reprograms protections and FET options). Used as a
+  reference for addresses and protocol only; it must not be run against this board as-is.

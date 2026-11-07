@@ -819,7 +819,7 @@ LOAD /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-
                 0x08000000                g_pfnVectors
                 0x08000178                        . = ALIGN (0x4)
 
-.text           0x08000178     0x1198
+.text           0x08000178     0x1204
                 0x08000178                        . = ALIGN (0x4)
  *(.text)
  .text          0x08000178       0x40 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crtbegin.o
@@ -1000,108 +1000,107 @@ LOAD /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-
                 0x080010a4      0x11c CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
                 0x080010a4                i2c_bb_read
  .text.bms_probe_init
-                0x080011c0       0x1c CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
+                0x080011c0       0x68 CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
                 0x080011c0                bms_probe_init
  .text.bms_probe_pass
-                0x080011dc      0x11c CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
-                0x080011dc                bms_probe_pass
+                0x08001228      0x13c CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
+                0x08001228                bms_probe_pass
  *(.glue_7)
- .glue_7        0x080012f8        0x0 linker stubs
+ .glue_7        0x08001364        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x080012f8        0x0 linker stubs
+ .glue_7t       0x08001364        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x080012f8        0x0 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crtbegin.o
+ .eh_frame      0x08001364        0x0 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crtbegin.o
  *(.init)
- .init          0x080012f8        0x4 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crti.o
-                0x080012f8                _init
- .init          0x080012fc        0x8 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crtn.o
+ .init          0x08001364        0x4 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crti.o
+                0x08001364                _init
+ .init          0x08001368        0x8 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crtn.o
  *(.fini)
- .fini          0x08001304        0x4 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crti.o
-                0x08001304                _fini
- .fini          0x08001308        0x8 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crtn.o
-                0x08001310                        . = ALIGN (0x4)
-                0x08001310                        _etext = .
+ .fini          0x08001370        0x4 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crti.o
+                0x08001370                _fini
+ .fini          0x08001374        0x8 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crtn.o
+                0x0800137c                        . = ALIGN (0x4)
+                0x0800137c                        _etext = .
 
-.vfp11_veneer   0x08001310        0x0
- .vfp11_veneer  0x08001310        0x0 linker stubs
+.vfp11_veneer   0x0800137c        0x0
+ .vfp11_veneer  0x0800137c        0x0 linker stubs
 
-.v4_bx          0x08001310        0x0
- .v4_bx         0x08001310        0x0 linker stubs
+.v4_bx          0x0800137c        0x0
+ .v4_bx         0x0800137c        0x0 linker stubs
 
-.iplt           0x08001310        0x0
- .iplt          0x08001310        0x0 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crtbegin.o
+.iplt           0x0800137c        0x0
+ .iplt          0x0800137c        0x0 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crtbegin.o
 
-.rodata         0x08001310       0x88
-                0x08001310                        . = ALIGN (0x4)
+.rodata         0x0800137c       0xb0
+                0x0800137c                        . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x08001310       0x21 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
+ .rodata        0x0800137c       0x21 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
  *(.rodata*)
- *fill*         0x08001331        0x3 
+ *fill*         0x0800139d        0x3 
  .rodata.AHBPrescTable
-                0x08001334       0x10 CMakeFiles/BMS-MCU-V1.dir/Src/system_stm32f2xx.c.obj
-                0x08001334                AHBPrescTable
+                0x080013a0       0x10 CMakeFiles/BMS-MCU-V1.dir/Src/system_stm32f2xx.c.obj
+                0x080013a0                AHBPrescTable
  .rodata.dev_desc
-                0x08001344       0x12 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
- *fill*         0x08001356        0x2 
+                0x080013b0       0x12 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
+ *fill*         0x080013c2        0x2 
  .rodata.cfg_desc
-                0x08001358       0x12 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
- *fill*         0x0800136a        0x2 
+                0x080013c4       0x12 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
+ *fill*         0x080013d6        0x2 
  .rodata.strings
-                0x0800136c        0xc CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
+                0x080013d8        0xc CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
  .rodata.status.1
-                0x08001378        0x2 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
- *fill*         0x0800137a        0x2 
- .rodata.g_bms_cmds
-                0x0800137c       0x1a CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
-                0x0800137c                g_bms_cmds
-                0x08001398                        . = ALIGN (0x4)
- *fill*         0x08001396        0x2 
+                0x080013e4        0x2 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
+ *fill*         0x080013e6        0x2 
+ .rodata.k_cmds
+                0x080013e8       0x42 CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
+                0x0800142c                        . = ALIGN (0x4)
+ *fill*         0x0800142a        0x2 
 
-.ARM.extab      0x08001398        0x0
-                0x08001398                        . = ALIGN (0x4)
+.ARM.extab      0x0800142c        0x0
+                0x0800142c                        . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08001398                        . = ALIGN (0x4)
+                0x0800142c                        . = ALIGN (0x4)
 
-.ARM            0x08001398        0x8
-                0x08001398                        . = ALIGN (0x4)
-                0x08001398                        __exidx_start = .
+.ARM            0x0800142c        0x8
+                0x0800142c                        . = ALIGN (0x4)
+                0x0800142c                        __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x08001398        0x8 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-memcpy.o)
-                0x080013a0                        __exidx_end = .
-                0x080013a0                        . = ALIGN (0x4)
+ .ARM.exidx     0x0800142c        0x8 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-memcpy.o)
+                0x08001434                        __exidx_end = .
+                0x08001434                        . = ALIGN (0x4)
 
-.preinit_array  0x080013a0        0x0
-                0x080013a0                        . = ALIGN (0x4)
-                0x080013a0                        PROVIDE (__preinit_array_start = .)
+.preinit_array  0x08001434        0x0
+                0x08001434                        . = ALIGN (0x4)
+                0x08001434                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x080013a0                        PROVIDE (__preinit_array_end = .)
-                0x080013a0                        . = ALIGN (0x4)
+                0x08001434                        PROVIDE (__preinit_array_end = .)
+                0x08001434                        . = ALIGN (0x4)
 
-.init_array     0x080013a0        0x8
-                0x080013a0                        . = ALIGN (0x4)
-                0x080013a0                        PROVIDE (__init_array_start = .)
+.init_array     0x08001434        0x8
+                0x08001434                        . = ALIGN (0x4)
+                0x08001434                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  .init_array.00000
-                0x080013a0        0x4 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-__call_atexit.o)
+                0x08001434        0x4 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-__call_atexit.o)
  *(.init_array*)
- .init_array    0x080013a4        0x4 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crtbegin.o
-                0x080013a8                        PROVIDE (__init_array_end = .)
-                0x080013a8                        . = ALIGN (0x4)
+ .init_array    0x08001438        0x4 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crtbegin.o
+                0x0800143c                        PROVIDE (__init_array_end = .)
+                0x0800143c                        . = ALIGN (0x4)
 
-.fini_array     0x080013a8        0x4
-                0x080013a8                        . = ALIGN (0x4)
-                0x080013a8                        PROVIDE (__fini_array_start = .)
+.fini_array     0x0800143c        0x4
+                0x0800143c                        . = ALIGN (0x4)
+                0x0800143c                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x080013a8        0x4 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crtbegin.o
-                0x080013ac                        PROVIDE (__fini_array_end = .)
-                0x080013ac                        . = ALIGN (0x4)
-                0x080013ac                        _sidata = LOADADDR (.data)
+ .fini_array    0x0800143c        0x4 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crtbegin.o
+                0x08001440                        PROVIDE (__fini_array_end = .)
+                0x08001440                        . = ALIGN (0x4)
+                0x08001440                        _sidata = LOADADDR (.data)
 
-.rel.dyn        0x080013ac        0x0
- .rel.iplt      0x080013ac        0x0 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crtbegin.o
+.rel.dyn        0x08001440        0x0
+ .rel.iplt      0x08001440        0x0 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crtbegin.o
 
-.data           0x20000000        0xc load address 0x080013ac
+.data           0x20000000        0xc load address 0x08001440
                 0x20000000                        _sdata = .
  *(.data)
  *(.data*)
@@ -1119,10 +1118,10 @@ LOAD /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-
                 0x2000000c                        . = ALIGN (0x4)
  *fill*         0x20000009        0x3 
 
-.igot.plt       0x2000000c        0x0 load address 0x080013b8
+.igot.plt       0x2000000c        0x0 load address 0x0800144c
  .igot.plt      0x2000000c        0x0 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crtbegin.o
 
-.tdata          0x2000000c        0x0 load address 0x080013b8
+.tdata          0x2000000c        0x0 load address 0x0800144c
  *(.tdata .tdata.* .gnu.linkonce.td.*)
                 0x2000000c                        . = ALIGN (0x4)
                 0x2000000c                        _edata = .
@@ -1139,7 +1138,7 @@ LOAD /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-
                 [!provide]                        PROVIDE (__data_source_end = __tdata_source_end)
                 [!provide]                        PROVIDE (__data_source_size = (__data_source_end - __data_source))
 
-.tbss           0x2000000c        0x0 load address 0x080013b8
+.tbss           0x2000000c        0x0 load address 0x0800144c
                 0x2000000c                        _sbss = .
                 0x2000000c                        __bss_start__ = _sbss
                 [!provide]                        PROVIDE (__bss_start = .)
@@ -1157,7 +1156,7 @@ LOAD /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-
                 [!provide]                        PROVIDE (__arm32_tls_tcb_offset = MAX (0x8, __tls_align))
                 [!provide]                        PROVIDE (__arm64_tls_tcb_offset = MAX (0x10, __tls_align))
 
-.bss            0x2000000c      0x2c8 load address 0x080013b8
+.bss            0x2000000c      0x300 load address 0x0800144c
  *(.bss)
  .bss           0x2000000c       0x1c /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crtbegin.o
  *(.bss*)
@@ -1175,27 +1174,27 @@ LOAD /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-
                 0x200001c0                g_usb_dbg
  .bss.setup.0   0x200001e0        0x8 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
  .bss.g_bms_dbg
-                0x200001e8       0xec CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
+                0x200001e8      0x124 CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
                 0x200001e8                g_bms_dbg
  *(COMMON)
-                0x200002d4                        . = ALIGN (0x4)
-                0x200002d4                        _ebss = .
-                0x200002d4                        __bss_end__ = _ebss
+                0x2000030c                        . = ALIGN (0x4)
+                0x2000030c                        _ebss = .
+                0x2000030c                        __bss_end__ = _ebss
                 [!provide]                        PROVIDE (__bss_end = .)
                 [!provide]                        PROVIDE (__bss_size = (__bss_end - __bss_start))
                 [!provide]                        PROVIDE (__non_tls_bss_start = ADDR (.bss))
 
 ._user_heap_stack
-                0x200002d4      0x604 load address 0x080013b8
-                0x200002d8                        . = ALIGN (0x8)
- *fill*         0x200002d4        0x4 
+                0x2000030c      0x604 load address 0x0800144c
+                0x20000310                        . = ALIGN (0x8)
+ *fill*         0x2000030c        0x4 
                 [!provide]                        PROVIDE (end = .)
-                0x200002d8                        PROVIDE (_end = .)
-                0x200004d8                        . = (. + _Min_Heap_Size)
- *fill*         0x200002d8      0x200 
-                0x200008d8                        . = (. + _Min_Stack_Size)
- *fill*         0x200004d8      0x400 
-                0x200008d8                        . = ALIGN (0x8)
+                0x20000310                        PROVIDE (_end = .)
+                0x20000510                        . = (. + _Min_Heap_Size)
+ *fill*         0x20000310      0x200 
+                0x20000910                        . = (. + _Min_Stack_Size)
+ *fill*         0x20000510      0x400 
+                0x20000910                        . = ALIGN (0x8)
 
 /DISCARD/
  libc.a:*(*)
@@ -1244,7 +1243,7 @@ LOAD /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-
 OUTPUT(BMS-MCU-V1.elf elf32-littlearm)
 LOAD linker stubs
 
-.debug_frame    0x00000000      0x664
+.debug_frame    0x00000000      0x66c
  .debug_frame   0x00000000       0x2c /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-init.o)
  .debug_frame   0x0000002c       0xb0 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-lock.o)
  .debug_frame   0x000000dc       0x5c /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-__call_atexit.o)
@@ -1257,10 +1256,10 @@ LOAD linker stubs
  .debug_frame   0x00000298       0x2c CMakeFiles/BMS-MCU-V1.dir/Src/usb_fs.c.obj
  .debug_frame   0x000002c4      0x118 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
  .debug_frame   0x000003dc      0x210 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
- .debug_frame   0x000005ec       0x50 CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
- .debug_frame   0x0000063c       0x28 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-memcpy.o)
+ .debug_frame   0x000005ec       0x58 CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
+ .debug_frame   0x00000644       0x28 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-memcpy.o)
 
-.debug_info     0x00000000     0x225d
+.debug_info     0x00000000     0x22d0
  .debug_info    0x00000000      0x261 CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
  .debug_info    0x00000261       0x30 CMakeFiles/BMS-MCU-V1.dir/Src/startup_stm32f205xx.S.obj
  .debug_info    0x00000291      0x520 CMakeFiles/BMS-MCU-V1.dir/Src/system_stm32f2xx.c.obj
@@ -1268,9 +1267,9 @@ LOAD linker stubs
  .debug_info    0x00000b72      0x544 CMakeFiles/BMS-MCU-V1.dir/Src/usb_fs.c.obj
  .debug_info    0x000010b6      0x7bf CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
  .debug_info    0x00001875      0x75c CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
- .debug_info    0x00001fd1      0x28c CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
+ .debug_info    0x00001fd1      0x2ff CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
 
-.debug_abbrev   0x00000000      0x9f3
+.debug_abbrev   0x00000000      0xa10
  .debug_abbrev  0x00000000      0x106 CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
  .debug_abbrev  0x00000106       0x24 CMakeFiles/BMS-MCU-V1.dir/Src/startup_stm32f205xx.S.obj
  .debug_abbrev  0x0000012a      0x122 CMakeFiles/BMS-MCU-V1.dir/Src/system_stm32f2xx.c.obj
@@ -1278,7 +1277,7 @@ LOAD linker stubs
  .debug_abbrev  0x00000392       0xf1 CMakeFiles/BMS-MCU-V1.dir/Src/usb_fs.c.obj
  .debug_abbrev  0x00000483      0x21e CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
  .debug_abbrev  0x000006a1      0x1e4 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
- .debug_abbrev  0x00000885      0x16e CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
+ .debug_abbrev  0x00000885      0x18b CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
 
 .debug_aranges  0x00000000      0x1d0
  .debug_aranges
@@ -1339,7 +1338,7 @@ LOAD linker stubs
  .debug_macro   0x00014b32       0xe0 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
  .debug_macro   0x00014c12       0xd1 CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
 
-.debug_line     0x00000000     0x2638
+.debug_line     0x00000000     0x266d
  .debug_line    0x00000000      0x3ea CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
  .debug_line    0x000003ea       0x7b CMakeFiles/BMS-MCU-V1.dir/Src/startup_stm32f205xx.S.obj
  .debug_line    0x00000465      0x3ee CMakeFiles/BMS-MCU-V1.dir/Src/system_stm32f2xx.c.obj
@@ -1347,18 +1346,18 @@ LOAD linker stubs
  .debug_line    0x00000d2b      0x442 CMakeFiles/BMS-MCU-V1.dir/Src/usb_fs.c.obj
  .debug_line    0x0000116d      0x819 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
  .debug_line    0x00001986      0x837 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
- .debug_line    0x000021bd      0x47b CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
+ .debug_line    0x000021bd      0x4b0 CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
 
-.debug_str      0x00000000    0x7ad16
- .debug_str     0x00000000    0x7ad16 CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
+.debug_str      0x00000000    0x7ad1c
+ .debug_str     0x00000000    0x7ad1c CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
                               0x775c1 (size before relaxing)
- .debug_str     0x0007ad16       0xac CMakeFiles/BMS-MCU-V1.dir/Src/startup_stm32f205xx.S.obj
- .debug_str     0x0007ad16    0x7756a CMakeFiles/BMS-MCU-V1.dir/Src/system_stm32f2xx.c.obj
- .debug_str     0x0007ad16    0x775fe CMakeFiles/BMS-MCU-V1.dir/Src/clock.c.obj
- .debug_str     0x0007ad16    0x776f9 CMakeFiles/BMS-MCU-V1.dir/Src/usb_fs.c.obj
- .debug_str     0x0007ad16    0x7a717 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
- .debug_str     0x0007ad16    0x776f8 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
- .debug_str     0x0007ad16    0x774f1 CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
+ .debug_str     0x0007ad1c       0xac CMakeFiles/BMS-MCU-V1.dir/Src/startup_stm32f205xx.S.obj
+ .debug_str     0x0007ad1c    0x7756a CMakeFiles/BMS-MCU-V1.dir/Src/system_stm32f2xx.c.obj
+ .debug_str     0x0007ad1c    0x775fe CMakeFiles/BMS-MCU-V1.dir/Src/clock.c.obj
+ .debug_str     0x0007ad1c    0x776f9 CMakeFiles/BMS-MCU-V1.dir/Src/usb_fs.c.obj
+ .debug_str     0x0007ad1c    0x7a717 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
+ .debug_str     0x0007ad1c    0x776f8 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
+ .debug_str     0x0007ad1c    0x774f7 CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
 
 .comment        0x00000000       0x43
  .comment       0x00000000       0x43 CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
