@@ -1,5 +1,5 @@
 ## BMS MCU V1
-# What we are doing
+# Goal
 We are trying to build a program on an STM32F205 that connects to a Battery Management System Texas Instruments BQ7695202 IC. This has been built on a printed circuit board. 
 
 # Project Status and Goals
