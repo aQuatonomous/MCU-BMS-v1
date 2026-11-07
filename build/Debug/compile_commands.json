@@ -1,0 +1,50 @@
+[
+{
+  "directory": "/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/build/Debug",
+  "command": "\"/Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc\" -DDEBUG -DRTE_DEVICE_STARTUP_STM32F2XX -I/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Inc -fdata-sections -ffunction-sections -Wl,--gc-sections -Wno-comment -mcpu=cortex-m3 -mlittle-endian -mthumb -std=gnu11 -fstack-usage -Wall -Wextra -Wpedantic -Wno-unused-parameter -O0 -g3 -ggdb -o CMakeFiles/BMS-MCU-V1.dir/Src/syscall.c.obj -c /Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/syscall.c",
+  "file": "/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/syscall.c",
+  "output": "/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/build/Debug/CMakeFiles/BMS-MCU-V1.dir/Src/syscall.c.obj"
+},
+{
+  "directory": "/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/build/Debug",
+  "command": "\"/Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc\" -DDEBUG -DRTE_DEVICE_STARTUP_STM32F2XX -I/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Inc -fdata-sections -ffunction-sections -Wl,--gc-sections -Wno-comment -mcpu=cortex-m3 -mlittle-endian -mthumb -std=gnu11 -fstack-usage -Wall -Wextra -Wpedantic -Wno-unused-parameter -O0 -g3 -ggdb -o CMakeFiles/BMS-MCU-V1.dir/Src/sysmem.c.obj -c /Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/sysmem.c",
+  "file": "/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/sysmem.c",
+  "output": "/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/build/Debug/CMakeFiles/BMS-MCU-V1.dir/Src/sysmem.c.obj"
+},
+{
+  "directory": "/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/build/Debug",
+  "command": "\"/Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc\" -DDEBUG -DRTE_DEVICE_STARTUP_STM32F2XX -I/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Inc -fdata-sections -ffunction-sections -Wl,--gc-sections -Wno-comment -mcpu=cortex-m3 -mlittle-endian -mthumb -std=gnu11 -fstack-usage -Wall -Wextra -Wpedantic -Wno-unused-parameter -O0 -g3 -ggdb -o CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj -c /Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/main.c",
+  "file": "/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/main.c",
+  "output": "/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/build/Debug/CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj"
+},
+{
+  "directory": "/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/build/Debug",
+  "command": "\"/Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc\" -DDEBUG -DRTE_DEVICE_STARTUP_STM32F2XX -I/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Inc -mcpu=cortex-m3 -mlittle-endian -mthumb -std=gnu11 -fstack-usage -Wall -Wextra -Wpedantic -Wno-unused-parameter -O0 -g3 -ggdb -x assembler-with-cpp -MMD -MP -o CMakeFiles/BMS-MCU-V1.dir/Src/startup_stm32f205xx.S.obj -c /Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/startup_stm32f205xx.S",
+  "file": "/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/startup_stm32f205xx.S",
+  "output": "/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/build/Debug/CMakeFiles/BMS-MCU-V1.dir/Src/startup_stm32f205xx.S.obj"
+},
+{
+  "directory": "/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/build/Debug",
+  "command": "\"/Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc\" -DDEBUG -DRTE_DEVICE_STARTUP_STM32F2XX -I/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Inc -fdata-sections -ffunction-sections -Wl,--gc-sections -Wno-comment -mcpu=cortex-m3 -mlittle-endian -mthumb -std=gnu11 -fstack-usage -Wall -Wextra -Wpedantic -Wno-unused-parameter -O0 -g3 -ggdb -o CMakeFiles/BMS-MCU-V1.dir/Src/system_stm32f2xx.c.obj -c /Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/system_stm32f2xx.c",
+  "file": "/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/system_stm32f2xx.c",
+  "output": "/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/build/Debug/CMakeFiles/BMS-MCU-V1.dir/Src/system_stm32f2xx.c.obj"
+},
+{
+  "directory": "/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/build/Debug",
+  "command": "\"/Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc\" -DDEBUG -DRTE_DEVICE_STARTUP_STM32F2XX -I/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Inc -fdata-sections -ffunction-sections -Wl,--gc-sections -Wno-comment -mcpu=cortex-m3 -mlittle-endian -mthumb -std=gnu11 -fstack-usage -Wall -Wextra -Wpedantic -Wno-unused-parameter -O0 -g3 -ggdb -o CMakeFiles/BMS-MCU-V1.dir/Src/clock.c.obj -c /Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/clock.c",
+  "file": "/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/clock.c",
+  "output": "/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/build/Debug/CMakeFiles/BMS-MCU-V1.dir/Src/clock.c.obj"
+},
+{
+  "directory": "/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/build/Debug",
+  "command": "\"/Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc\" -DDEBUG -DRTE_DEVICE_STARTUP_STM32F2XX -I/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Inc -fdata-sections -ffunction-sections -Wl,--gc-sections -Wno-comment -mcpu=cortex-m3 -mlittle-endian -mthumb -std=gnu11 -fstack-usage -Wall -Wextra -Wpedantic -Wno-unused-parameter -O0 -g3 -ggdb -o CMakeFiles/BMS-MCU-V1.dir/Src/usb_fs.c.obj -c /Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/usb_fs.c",
+  "file": "/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/usb_fs.c",
+  "output": "/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/build/Debug/CMakeFiles/BMS-MCU-V1.dir/Src/usb_fs.c.obj"
+},
+{
+  "directory": "/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/build/Debug",
+  "command": "\"/Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc\" -DDEBUG -DRTE_DEVICE_STARTUP_STM32F2XX -I/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Inc -fdata-sections -ffunction-sections -Wl,--gc-sections -Wno-comment -mcpu=cortex-m3 -mlittle-endian -mthumb -std=gnu11 -fstack-usage -Wall -Wextra -Wpedantic -Wno-unused-parameter -O0 -g3 -ggdb -o CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj -c /Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/usb_device.c",
+  "file": "/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/usb_device.c",
+  "output": "/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/build/Debug/CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj"
+}
+]

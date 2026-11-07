@@ -1,0 +1,8 @@
+/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/usb_device.c:42:13:ep0_arm_out	4	static
+/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/usb_device.c:49:13:ep0_stall	4	static
+/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/usb_device.c:57:13:ep0_send	40	static
+/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/usb_device.c:78:13:flush_fifos	16	static
+/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/usb_device.c:89:13:send_string	96	static
+/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/usb_device.c:113:13:handle_setup	24	static
+/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/usb_device.c:149:6:usb_device_connect	4	static
+/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/usb_device.c:158:6:usb_device_poll	32	static

@@ -31,6 +31,10 @@ include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/files.cmake)
 # Add sources to executable/library
 target_sources(${PROJECT_NAME} PRIVATE
   # User defined sources
+  Src/system_stm32f2xx.c
+  Src/clock.c
+  Src/usb_fs.c
+  Src/usb_device.c
 )
 
 # Add include directories

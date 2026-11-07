@@ -1,0 +1,3 @@
+/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/build/Debug/CMakeFiles/BMS-MCU-V1.dir
+/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/build/Debug/CMakeFiles/edit_cache.dir
+/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/build/Debug/CMakeFiles/rebuild_cache.dir
