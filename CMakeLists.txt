@@ -37,6 +37,7 @@ target_sources(${PROJECT_NAME} PRIVATE
   Src/usb_device.c
   Src/i2c_bb.c
   Src/bms_probe.c
+  Src/bq_dm.c
 )
 
 # Add include directories

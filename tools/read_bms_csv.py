@@ -23,6 +23,20 @@ NAMES = {0x00: "ControlStatus", 0x02: "SafetyAlertA", 0x03: "SafetyStatusA", 0x0
          0x62: "AlarmStatus", 0x64: "AlarmRawStatus", 0x66: "AlarmEnable",
          0x68: "InternalTemp", 0x7F: "FETStatus"}
 UNITS = {"Cell": "mV (per BQ datasheet)", "InternalTemp": "0.1 K (assumed, unverified)"}
+# Names from TI's STM32_I2C/BQ769x2Header.h (subcommands and data-memory addresses).
+DM_NAMES = {0x0001: "DEVICE_NUMBER", 0x0057: "MANUFACTURING_STATUS", 0x9308: "FET Options",
+            0x9309: "Chg Pump Control", 0x930E: "Predischarge Timeout", 0x930F: "Predischarge Stop Delta",
+            0x9269: "DSG FET Protections A", 0x926A: "DSG FET Protections B", 0x926B: "DSG FET Protections C",
+            0x9265: "CHG FET Protections A", 0x9266: "CHG FET Protections B", 0x9267: "CHG FET Protections C",
+            0x9261: "Enabled Protections A", 0x9262: "Enabled Protections B", 0x9263: "Enabled Protections C",
+            0x925F: "Protection Configuration", 0x92FA: "CFETOFF Pin Config", 0x92FB: "DFETOFF Pin Config",
+            0x92FC: "ALERT Pin Config", 0x9300: "HDQ Pin Config", 0x9301: "DCHG Pin Config",
+            0x9302: "DDSG Pin Config", 0x9303: "DA Configuration", 0x9234: "Power Config",
+            0x9236: "REG12 Config", 0x9237: "REG0 Config", 0x9241: "Shutdown Stack Voltage",
+            0x9343: "Mfg Status Init"}
+# bq_dm_dbg_t: pass_count, n, then 16-byte records
+# {u16 cmd, u8 status, u8 len, u8 chk_ok, u8 crc_ok, u8 chk_ok_echo, u8 chk_byte, u8 data[32], u16 echo, u16 pad}
+DM_HDR, DM_REC = 8, 44
 STATUS = {0: "OK", 1: "BUS_BUSY", 2: "NACK_ADDR", 3: "NACK_DATA", 4: "STRETCH"}
 
 # Struct layout of bms_dbg_t (see Inc/bms_probe.h): 7 header words, then one 8-byte
@@ -114,6 +128,29 @@ def main():
             if s + 1 < args.samples:
                 time.sleep(args.interval)
     print(out)
+
+    # ---- BQ configuration read-out (data memory), second CSV -------------------------
+    daddr, dsize = symbol_addr_size("g_bq_dm")
+    dbuf = read_struct(daddr, dsize)
+    dn = (dsize - DM_HDR) // DM_REC
+    dout = out.replace("bms_readout_", "bq_config_")
+    with open(dout, "w", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["timestamp", "mcu_dm_pass_count", "request_hex", "name", "i2c_status",
+                    "reported_len", "checksum_ok_vs_request", "checksum_ok_vs_echo", "crc_ok",
+                    "echo_3E_3F", "checksum_byte", "first_byte", "data_hex_lsb_first"])
+        ts = datetime.datetime.now().isoformat(timespec="seconds")
+        for i in range(dn):
+            o = DM_HDR + DM_REC * i
+            cmd = int.from_bytes(dbuf[o:o + 2], "little")
+            st, ln, chk, crc, chk_e, chkb = dbuf[o + 2], dbuf[o + 3], dbuf[o + 4], dbuf[o + 5], dbuf[o + 6], dbuf[o + 7]
+            data = dbuf[o + 8: o + 40][:min(ln, 32)]
+            echo = int.from_bytes(dbuf[o + 40:o + 42], "little")
+            w.writerow([ts, u32(dbuf, 0), f"0x{cmd:04X}", DM_NAMES.get(cmd, "?"), STATUS.get(st, st), ln,
+                        bool(chk), bool(chk_e), bool(crc), f"0x{echo:04X}", f"0x{chkb:02X}",
+                        f"0x{data[0]:02X}" if data else "",
+                        " ".join(f"{x:02X}" for x in data)])
+    print(dout)
 
 
 if __name__ == "__main__":

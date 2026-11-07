@@ -171,3 +171,30 @@ i2c_status_t i2c_bb_read(uint8_t addr7, uint8_t reg, uint8_t *buf, uint32_t n)
     stop();
     return I2C_OK;
 }
+
+i2c_status_t i2c_bb_write(uint8_t addr7, uint8_t reg, const uint8_t *buf, uint32_t n)
+{
+    i2c_status_t st = bus_idle_check();
+    uint32_t i;
+    int a;
+
+    if (st != I2C_OK) { return st; }
+
+    st = start();
+    if (st != I2C_OK) { stop(); return st; }
+    a = write_byte((uint8_t)(addr7 << 1));
+    if (a < 0) { stop(); return I2C_ERR_STRETCH; }
+    if (!a)    { stop(); return I2C_ERR_NACK_ADDR; }
+
+    a = write_byte(reg);
+    if (a < 0) { stop(); return I2C_ERR_STRETCH; }
+    if (!a)    { stop(); return I2C_ERR_NACK_DATA; }
+
+    for (i = 0; i < n; i++) {
+        a = write_byte(buf[i]);
+        if (a < 0) { stop(); return I2C_ERR_STRETCH; }
+        if (!a)    { stop(); return I2C_ERR_NACK_DATA; }
+    }
+    stop();
+    return I2C_OK;
+}

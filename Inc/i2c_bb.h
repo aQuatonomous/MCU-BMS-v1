@@ -25,4 +25,8 @@ i2c_status_t i2c_bb_probe(uint8_t addr7);
  * n bytes (ACK all but last), STOP. */
 i2c_status_t i2c_bb_read(uint8_t addr7, uint8_t reg, uint8_t *buf, uint32_t n);
 
+/* Write n raw bytes starting at register reg: START, addr+W, reg, bytes, STOP.
+ * The caller supplies any CRC bytes. Used ONLY by bq_dm.c for the fixed read-request table. */
+i2c_status_t i2c_bb_write(uint8_t addr7, uint8_t reg, const uint8_t *buf, uint32_t n);
+
 #endif /* I2C_BB_H */

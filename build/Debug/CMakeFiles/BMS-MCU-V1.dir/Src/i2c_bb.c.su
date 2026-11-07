@@ -14,3 +14,4 @@
 /Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/i2c_bb.c:126:21:bus_idle_check	8	static
 /Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/i2c_bb.c:131:14:i2c_bb_probe	24	static
 /Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/i2c_bb.c:144:14:i2c_bb_read	40	static
+/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/i2c_bb.c:175:14:i2c_bb_write	40	static

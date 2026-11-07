@@ -522,6 +522,7 @@ Discarded input sections
  .group         0x00000000        0xc CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
  .group         0x00000000        0xc CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
  .group         0x00000000        0xc CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
+ .group         0x00000000        0xc CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
  .text          0x00000000        0x0 CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
  .data          0x00000000        0x0 CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
  .bss           0x00000000        0x0 CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
@@ -755,6 +756,43 @@ Discarded input sections
  .debug_macro   0x00000000      0x11f CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
  .debug_macro   0x00000000    0x133fd CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
  .debug_macro   0x00000000       0x16 CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
+ .group         0x00000000        0xc CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .group         0x00000000        0xc CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .group         0x00000000        0xc CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .group         0x00000000        0xc CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .group         0x00000000        0xc CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .group         0x00000000        0xc CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .group         0x00000000        0xc CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .group         0x00000000        0xc CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .group         0x00000000        0xc CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .group         0x00000000        0xc CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .group         0x00000000        0xc CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .group         0x00000000        0xc CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .group         0x00000000        0xc CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .group         0x00000000        0xc CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .group         0x00000000        0xc CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .group         0x00000000        0xc CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .group         0x00000000        0xc CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .text          0x00000000        0x0 CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .data          0x00000000        0x0 CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .bss           0x00000000        0x0 CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .debug_macro   0x00000000      0xac6 CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .debug_macro   0x00000000       0x22 CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .debug_macro   0x00000000       0x22 CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .debug_macro   0x00000000       0x8e CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .debug_macro   0x00000000       0x51 CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .debug_macro   0x00000000      0x103 CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .debug_macro   0x00000000       0x6a CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .debug_macro   0x00000000      0x1df CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .debug_macro   0x00000000       0x1c CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .debug_macro   0x00000000       0x22 CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .debug_macro   0x00000000       0xeb CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .debug_macro   0x00000000      0xe82 CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .debug_macro   0x00000000      0x11f CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .debug_macro   0x00000000    0x133fd CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .debug_macro   0x00000000       0x10 CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .debug_macro   0x00000000       0x16 CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .debug_macro   0x00000000       0x1c CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
  .data          0x00000000        0x0 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-memcpy.o)
  .bss           0x00000000        0x0 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-memcpy.o)
  .ARM.extab     0x00000000        0x0 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-memcpy.o)
@@ -797,6 +835,7 @@ LOAD CMakeFiles/BMS-MCU-V1.dir/Src/usb_fs.c.obj
 LOAD CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
 LOAD CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
 LOAD CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
+LOAD CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
 START GROUP
 LOAD /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/libgcc.a
 LOAD /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a
@@ -819,7 +858,7 @@ LOAD /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-
                 0x08000000                g_pfnVectors
                 0x08000178                        . = ALIGN (0x4)
 
-.text           0x08000178     0x1204
+.text           0x08000178     0x172c
                 0x08000178                        . = ALIGN (0x4)
  *(.text)
  .text          0x08000178       0x40 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crtbegin.o
@@ -845,262 +884,276 @@ LOAD /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-
  .text.__register_exitproc
                 0x08000344       0x80 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-__atexit.o)
                 0x08000344                __register_exitproc
- .text.main     0x080003c4       0x4c CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
+ .text.main     0x080003c4       0x74 CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
                 0x080003c4                main
  .text.Reset_Handler
-                0x08000410       0x50 CMakeFiles/BMS-MCU-V1.dir/Src/startup_stm32f205xx.S.obj
-                0x08000410                Reset_Handler
+                0x08000438       0x50 CMakeFiles/BMS-MCU-V1.dir/Src/startup_stm32f205xx.S.obj
+                0x08000438                Reset_Handler
  .text.Default_Handler
-                0x08000460        0x2 CMakeFiles/BMS-MCU-V1.dir/Src/startup_stm32f205xx.S.obj
-                0x08000460                DMA1_Stream3_IRQHandler
-                0x08000460                EXTI2_IRQHandler
-                0x08000460                TIM8_CC_IRQHandler
-                0x08000460                DebugMon_Handler
-                0x08000460                TIM1_CC_IRQHandler
-                0x08000460                DMA2_Stream5_IRQHandler
-                0x08000460                HardFault_Handler
-                0x08000460                DMA1_Stream5_IRQHandler
-                0x08000460                SysTick_Handler
-                0x08000460                PVD_IRQHandler
-                0x08000460                SDIO_IRQHandler
-                0x08000460                TAMP_STAMP_IRQHandler
-                0x08000460                PendSV_Handler
-                0x08000460                NMI_Handler
-                0x08000460                CAN2_RX1_IRQHandler
-                0x08000460                EXTI3_IRQHandler
-                0x08000460                TIM8_TRG_COM_TIM14_IRQHandler
-                0x08000460                TIM1_UP_TIM10_IRQHandler
-                0x08000460                TIM8_UP_TIM13_IRQHandler
-                0x08000460                I2C3_ER_IRQHandler
-                0x08000460                EXTI0_IRQHandler
-                0x08000460                I2C2_EV_IRQHandler
-                0x08000460                DMA1_Stream2_IRQHandler
-                0x08000460                CAN1_RX0_IRQHandler
-                0x08000460                OTG_HS_WKUP_IRQHandler
-                0x08000460                UsageFault_Handler
-                0x08000460                CAN2_SCE_IRQHandler
-                0x08000460                DMA2_Stream2_IRQHandler
-                0x08000460                SPI1_IRQHandler
-                0x08000460                TIM6_DAC_IRQHandler
-                0x08000460                TIM1_BRK_TIM9_IRQHandler
-                0x08000460                CAN2_RX0_IRQHandler
-                0x08000460                DMA2_Stream3_IRQHandler
-                0x08000460                USART6_IRQHandler
-                0x08000460                USART3_IRQHandler
-                0x08000460                CAN1_RX1_IRQHandler
-                0x08000460                UART5_IRQHandler
-                0x08000460                DMA2_Stream0_IRQHandler
-                0x08000460                TIM4_IRQHandler
-                0x08000460                I2C1_EV_IRQHandler
-                0x08000460                DMA1_Stream6_IRQHandler
-                0x08000460                DMA1_Stream1_IRQHandler
-                0x08000460                UART4_IRQHandler
-                0x08000460                TIM3_IRQHandler
-                0x08000460                RCC_IRQHandler
-                0x08000460                TIM8_BRK_TIM12_IRQHandler
-                0x08000460                Default_Handler
-                0x08000460                EXTI15_10_IRQHandler
-                0x08000460                ADC_IRQHandler
-                0x08000460                DMA1_Stream7_IRQHandler
-                0x08000460                TIM7_IRQHandler
-                0x08000460                CAN2_TX_IRQHandler
-                0x08000460                TIM5_IRQHandler
-                0x08000460                DMA2_Stream7_IRQHandler
-                0x08000460                I2C3_EV_IRQHandler
-                0x08000460                EXTI9_5_IRQHandler
-                0x08000460                RTC_WKUP_IRQHandler
-                0x08000460                SPI2_IRQHandler
-                0x08000460                OTG_HS_EP1_IN_IRQHandler
-                0x08000460                MemManage_Handler
-                0x08000460                DMA1_Stream0_IRQHandler
-                0x08000460                CAN1_TX_IRQHandler
-                0x08000460                SVC_Handler
-                0x08000460                EXTI4_IRQHandler
-                0x08000460                FSMC_IRQHandler
-                0x08000460                OTG_HS_EP1_OUT_IRQHandler
-                0x08000460                WWDG_IRQHandler
-                0x08000460                TIM2_IRQHandler
-                0x08000460                OTG_FS_WKUP_IRQHandler
-                0x08000460                TIM1_TRG_COM_TIM11_IRQHandler
-                0x08000460                OTG_HS_IRQHandler
-                0x08000460                EXTI1_IRQHandler
-                0x08000460                USART2_IRQHandler
-                0x08000460                I2C2_ER_IRQHandler
-                0x08000460                DMA2_Stream1_IRQHandler
-                0x08000460                CAN1_SCE_IRQHandler
-                0x08000460                FLASH_IRQHandler
-                0x08000460                DMA2_Stream4_IRQHandler
-                0x08000460                BusFault_Handler
-                0x08000460                USART1_IRQHandler
-                0x08000460                OTG_FS_IRQHandler
-                0x08000460                SPI3_IRQHandler
-                0x08000460                DMA1_Stream4_IRQHandler
-                0x08000460                I2C1_ER_IRQHandler
-                0x08000460                DMA2_Stream6_IRQHandler
-                0x08000460                RTC_Alarm_IRQHandler
- *fill*         0x08000462        0x2 
+                0x08000488        0x2 CMakeFiles/BMS-MCU-V1.dir/Src/startup_stm32f205xx.S.obj
+                0x08000488                DMA1_Stream3_IRQHandler
+                0x08000488                EXTI2_IRQHandler
+                0x08000488                TIM8_CC_IRQHandler
+                0x08000488                DebugMon_Handler
+                0x08000488                TIM1_CC_IRQHandler
+                0x08000488                DMA2_Stream5_IRQHandler
+                0x08000488                HardFault_Handler
+                0x08000488                DMA1_Stream5_IRQHandler
+                0x08000488                SysTick_Handler
+                0x08000488                PVD_IRQHandler
+                0x08000488                SDIO_IRQHandler
+                0x08000488                TAMP_STAMP_IRQHandler
+                0x08000488                PendSV_Handler
+                0x08000488                NMI_Handler
+                0x08000488                CAN2_RX1_IRQHandler
+                0x08000488                EXTI3_IRQHandler
+                0x08000488                TIM8_TRG_COM_TIM14_IRQHandler
+                0x08000488                TIM1_UP_TIM10_IRQHandler
+                0x08000488                TIM8_UP_TIM13_IRQHandler
+                0x08000488                I2C3_ER_IRQHandler
+                0x08000488                EXTI0_IRQHandler
+                0x08000488                I2C2_EV_IRQHandler
+                0x08000488                DMA1_Stream2_IRQHandler
+                0x08000488                CAN1_RX0_IRQHandler
+                0x08000488                OTG_HS_WKUP_IRQHandler
+                0x08000488                UsageFault_Handler
+                0x08000488                CAN2_SCE_IRQHandler
+                0x08000488                DMA2_Stream2_IRQHandler
+                0x08000488                SPI1_IRQHandler
+                0x08000488                TIM6_DAC_IRQHandler
+                0x08000488                TIM1_BRK_TIM9_IRQHandler
+                0x08000488                CAN2_RX0_IRQHandler
+                0x08000488                DMA2_Stream3_IRQHandler
+                0x08000488                USART6_IRQHandler
+                0x08000488                USART3_IRQHandler
+                0x08000488                CAN1_RX1_IRQHandler
+                0x08000488                UART5_IRQHandler
+                0x08000488                DMA2_Stream0_IRQHandler
+                0x08000488                TIM4_IRQHandler
+                0x08000488                I2C1_EV_IRQHandler
+                0x08000488                DMA1_Stream6_IRQHandler
+                0x08000488                DMA1_Stream1_IRQHandler
+                0x08000488                UART4_IRQHandler
+                0x08000488                TIM3_IRQHandler
+                0x08000488                RCC_IRQHandler
+                0x08000488                TIM8_BRK_TIM12_IRQHandler
+                0x08000488                Default_Handler
+                0x08000488                EXTI15_10_IRQHandler
+                0x08000488                ADC_IRQHandler
+                0x08000488                DMA1_Stream7_IRQHandler
+                0x08000488                TIM7_IRQHandler
+                0x08000488                CAN2_TX_IRQHandler
+                0x08000488                TIM5_IRQHandler
+                0x08000488                DMA2_Stream7_IRQHandler
+                0x08000488                I2C3_EV_IRQHandler
+                0x08000488                EXTI9_5_IRQHandler
+                0x08000488                RTC_WKUP_IRQHandler
+                0x08000488                SPI2_IRQHandler
+                0x08000488                OTG_HS_EP1_IN_IRQHandler
+                0x08000488                MemManage_Handler
+                0x08000488                DMA1_Stream0_IRQHandler
+                0x08000488                CAN1_TX_IRQHandler
+                0x08000488                SVC_Handler
+                0x08000488                EXTI4_IRQHandler
+                0x08000488                FSMC_IRQHandler
+                0x08000488                OTG_HS_EP1_OUT_IRQHandler
+                0x08000488                WWDG_IRQHandler
+                0x08000488                TIM2_IRQHandler
+                0x08000488                OTG_FS_WKUP_IRQHandler
+                0x08000488                TIM1_TRG_COM_TIM11_IRQHandler
+                0x08000488                OTG_HS_IRQHandler
+                0x08000488                EXTI1_IRQHandler
+                0x08000488                USART2_IRQHandler
+                0x08000488                I2C2_ER_IRQHandler
+                0x08000488                DMA2_Stream1_IRQHandler
+                0x08000488                CAN1_SCE_IRQHandler
+                0x08000488                FLASH_IRQHandler
+                0x08000488                DMA2_Stream4_IRQHandler
+                0x08000488                BusFault_Handler
+                0x08000488                USART1_IRQHandler
+                0x08000488                OTG_FS_IRQHandler
+                0x08000488                SPI3_IRQHandler
+                0x08000488                DMA1_Stream4_IRQHandler
+                0x08000488                I2C1_ER_IRQHandler
+                0x08000488                DMA2_Stream6_IRQHandler
+                0x08000488                RTC_Alarm_IRQHandler
+ *fill*         0x0800048a        0x2 
  .text.SystemInit
-                0x08000464       0x18 CMakeFiles/BMS-MCU-V1.dir/Src/system_stm32f2xx.c.obj
-                0x08000464                SystemInit
+                0x0800048c       0x18 CMakeFiles/BMS-MCU-V1.dir/Src/system_stm32f2xx.c.obj
+                0x0800048c                SystemInit
  .text.SystemCoreClockUpdate
-                0x0800047c       0x98 CMakeFiles/BMS-MCU-V1.dir/Src/system_stm32f2xx.c.obj
-                0x0800047c                SystemCoreClockUpdate
+                0x080004a4       0x98 CMakeFiles/BMS-MCU-V1.dir/Src/system_stm32f2xx.c.obj
+                0x080004a4                SystemCoreClockUpdate
  .text.clock_init_hse_pll
-                0x08000514      0x13c CMakeFiles/BMS-MCU-V1.dir/Src/clock.c.obj
-                0x08000514                clock_init_hse_pll
+                0x0800053c      0x13c CMakeFiles/BMS-MCU-V1.dir/Src/clock.c.obj
+                0x0800053c                clock_init_hse_pll
  .text.delay_ms
-                0x08000650       0x5c CMakeFiles/BMS-MCU-V1.dir/Src/clock.c.obj
-                0x08000650                delay_ms
+                0x08000678       0x5c CMakeFiles/BMS-MCU-V1.dir/Src/clock.c.obj
+                0x08000678                delay_ms
  .text.usb_fs_core_init
-                0x080006ac      0x10c CMakeFiles/BMS-MCU-V1.dir/Src/usb_fs.c.obj
-                0x080006ac                usb_fs_core_init
+                0x080006d4      0x10c CMakeFiles/BMS-MCU-V1.dir/Src/usb_fs.c.obj
+                0x080006d4                usb_fs_core_init
  .text.ep0_arm_out
-                0x080007b8       0x28 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
+                0x080007e0       0x28 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
  .text.ep0_stall
-                0x080007e0       0x3c CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
+                0x08000808       0x3c CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
  .text.ep0_send
-                0x0800081c       0xc0 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
+                0x08000844       0xc0 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
  .text.flush_fifos
-                0x080008dc       0x68 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
+                0x08000904       0x68 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
  .text.send_string
-                0x08000944       0xc0 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
+                0x0800096c       0xc0 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
  .text.handle_setup
-                0x08000a04      0x188 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
+                0x08000a2c      0x188 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
  .text.usb_device_connect
-                0x08000b8c       0x30 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
-                0x08000b8c                usb_device_connect
+                0x08000bb4       0x30 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
+                0x08000bb4                usb_device_connect
  .text.usb_device_poll
-                0x08000bbc      0x148 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
-                0x08000bbc                usb_device_poll
- .text.delay_q  0x08000d04       0x2c CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
- .text.sda_hi   0x08000d30       0x18 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
- .text.sda_lo   0x08000d48       0x18 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
- .text.scl_lo   0x08000d60       0x18 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
- .text.sda_rd   0x08000d78       0x1c CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
- .text.scl_rd   0x08000d94       0x1c CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
- .text.scl_hi   0x08000db0       0x48 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
+                0x08000be4      0x148 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
+                0x08000be4                usb_device_poll
+ .text.delay_q  0x08000d2c       0x2c CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
+ .text.sda_hi   0x08000d58       0x18 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
+ .text.sda_lo   0x08000d70       0x18 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
+ .text.scl_lo   0x08000d88       0x18 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
+ .text.sda_rd   0x08000da0       0x1c CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
+ .text.scl_rd   0x08000dbc       0x1c CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
+ .text.scl_hi   0x08000dd8       0x48 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
  .text.i2c_bb_init
-                0x08000df8       0x88 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
-                0x08000df8                i2c_bb_init
+                0x08000e20       0x88 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
+                0x08000e20                i2c_bb_init
  .text.i2c_bb_line_levels
-                0x08000e80       0x18 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
-                0x08000e80                i2c_bb_line_levels
- .text.start    0x08000e98       0x36 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
- .text.stop     0x08000ece       0x20 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
+                0x08000ea8       0x18 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
+                0x08000ea8                i2c_bb_line_levels
+ .text.start    0x08000ec0       0x36 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
+ .text.stop     0x08000ef6       0x20 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
  .text.write_byte
-                0x08000eee       0x96 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
+                0x08000f16       0x96 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
  .text.read_byte
-                0x08000f84       0x9a CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
+                0x08000fac       0x9a CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
  .text.bus_idle_check
-                0x0800101e       0x24 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
+                0x08001046       0x24 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
  .text.i2c_bb_probe
-                0x08001042       0x62 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
-                0x08001042                i2c_bb_probe
+                0x0800106a       0x62 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
+                0x0800106a                i2c_bb_probe
  .text.i2c_bb_read
-                0x080010a4      0x11c CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
-                0x080010a4                i2c_bb_read
+                0x080010cc      0x11c CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
+                0x080010cc                i2c_bb_read
+ .text.i2c_bb_write
+                0x080011e8       0xd8 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
+                0x080011e8                i2c_bb_write
  .text.bms_probe_init
-                0x080011c0       0x68 CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
-                0x080011c0                bms_probe_init
+                0x080012c0       0x68 CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
+                0x080012c0                bms_probe_init
  .text.bms_probe_pass
-                0x08001228      0x13c CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
-                0x08001228                bms_probe_pass
+                0x08001328      0x13c CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
+                0x08001328                bms_probe_pass
+ .text.crc8     0x08001464       0x6c CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .text.read_crc
+                0x080014d0       0xc6 CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ *fill*         0x08001596        0x2 
+ .text.read_entry
+                0x08001598      0x2b8 CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .text.bq_dm_pass
+                0x08001850       0x3c CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+                0x08001850                bq_dm_pass
  *(.glue_7)
- .glue_7        0x08001364        0x0 linker stubs
+ .glue_7        0x0800188c        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x08001364        0x0 linker stubs
+ .glue_7t       0x0800188c        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x08001364        0x0 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crtbegin.o
+ .eh_frame      0x0800188c        0x0 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crtbegin.o
  *(.init)
- .init          0x08001364        0x4 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crti.o
-                0x08001364                _init
- .init          0x08001368        0x8 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crtn.o
+ .init          0x0800188c        0x4 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crti.o
+                0x0800188c                _init
+ .init          0x08001890        0x8 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crtn.o
  *(.fini)
- .fini          0x08001370        0x4 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crti.o
-                0x08001370                _fini
- .fini          0x08001374        0x8 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crtn.o
-                0x0800137c                        . = ALIGN (0x4)
-                0x0800137c                        _etext = .
+ .fini          0x08001898        0x4 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crti.o
+                0x08001898                _fini
+ .fini          0x0800189c        0x8 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crtn.o
+                0x080018a4                        . = ALIGN (0x4)
+                0x080018a4                        _etext = .
 
-.vfp11_veneer   0x0800137c        0x0
- .vfp11_veneer  0x0800137c        0x0 linker stubs
+.vfp11_veneer   0x080018a4        0x0
+ .vfp11_veneer  0x080018a4        0x0 linker stubs
 
-.v4_bx          0x0800137c        0x0
- .v4_bx         0x0800137c        0x0 linker stubs
+.v4_bx          0x080018a4        0x0
+ .v4_bx         0x080018a4        0x0 linker stubs
 
-.iplt           0x0800137c        0x0
- .iplt          0x0800137c        0x0 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crtbegin.o
+.iplt           0x080018a4        0x0
+ .iplt          0x080018a4        0x0 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crtbegin.o
 
-.rodata         0x0800137c       0xb0
-                0x0800137c                        . = ALIGN (0x4)
+.rodata         0x080018a4       0xe8
+                0x080018a4                        . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x0800137c       0x21 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
+ .rodata        0x080018a4       0x21 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
  *(.rodata*)
- *fill*         0x0800139d        0x3 
+ *fill*         0x080018c5        0x3 
  .rodata.AHBPrescTable
-                0x080013a0       0x10 CMakeFiles/BMS-MCU-V1.dir/Src/system_stm32f2xx.c.obj
-                0x080013a0                AHBPrescTable
+                0x080018c8       0x10 CMakeFiles/BMS-MCU-V1.dir/Src/system_stm32f2xx.c.obj
+                0x080018c8                AHBPrescTable
  .rodata.dev_desc
-                0x080013b0       0x12 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
- *fill*         0x080013c2        0x2 
+                0x080018d8       0x12 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
+ *fill*         0x080018ea        0x2 
  .rodata.cfg_desc
-                0x080013c4       0x12 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
- *fill*         0x080013d6        0x2 
+                0x080018ec       0x12 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
+ *fill*         0x080018fe        0x2 
  .rodata.strings
-                0x080013d8        0xc CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
+                0x08001900        0xc CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
  .rodata.status.1
-                0x080013e4        0x2 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
- *fill*         0x080013e6        0x2 
+                0x0800190c        0x2 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
+ *fill*         0x0800190e        0x2 
  .rodata.k_cmds
-                0x080013e8       0x42 CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
-                0x0800142c                        . = ALIGN (0x4)
- *fill*         0x0800142a        0x2 
+                0x08001910       0x42 CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
+ *fill*         0x08001952        0x2 
+ .rodata.k_table
+                0x08001954       0x38 CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+                0x0800198c                        . = ALIGN (0x4)
 
-.ARM.extab      0x0800142c        0x0
-                0x0800142c                        . = ALIGN (0x4)
+.ARM.extab      0x0800198c        0x0
+                0x0800198c                        . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0800142c                        . = ALIGN (0x4)
+                0x0800198c                        . = ALIGN (0x4)
 
-.ARM            0x0800142c        0x8
-                0x0800142c                        . = ALIGN (0x4)
-                0x0800142c                        __exidx_start = .
+.ARM            0x0800198c        0x8
+                0x0800198c                        . = ALIGN (0x4)
+                0x0800198c                        __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x0800142c        0x8 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-memcpy.o)
-                0x08001434                        __exidx_end = .
-                0x08001434                        . = ALIGN (0x4)
+ .ARM.exidx     0x0800198c        0x8 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-memcpy.o)
+                0x08001994                        __exidx_end = .
+                0x08001994                        . = ALIGN (0x4)
 
-.preinit_array  0x08001434        0x0
-                0x08001434                        . = ALIGN (0x4)
-                0x08001434                        PROVIDE (__preinit_array_start = .)
+.preinit_array  0x08001994        0x0
+                0x08001994                        . = ALIGN (0x4)
+                0x08001994                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x08001434                        PROVIDE (__preinit_array_end = .)
-                0x08001434                        . = ALIGN (0x4)
+                0x08001994                        PROVIDE (__preinit_array_end = .)
+                0x08001994                        . = ALIGN (0x4)
 
-.init_array     0x08001434        0x8
-                0x08001434                        . = ALIGN (0x4)
-                0x08001434                        PROVIDE (__init_array_start = .)
+.init_array     0x08001994        0x8
+                0x08001994                        . = ALIGN (0x4)
+                0x08001994                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  .init_array.00000
-                0x08001434        0x4 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-__call_atexit.o)
+                0x08001994        0x4 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-__call_atexit.o)
  *(.init_array*)
- .init_array    0x08001438        0x4 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crtbegin.o
-                0x0800143c                        PROVIDE (__init_array_end = .)
-                0x0800143c                        . = ALIGN (0x4)
+ .init_array    0x08001998        0x4 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crtbegin.o
+                0x0800199c                        PROVIDE (__init_array_end = .)
+                0x0800199c                        . = ALIGN (0x4)
 
-.fini_array     0x0800143c        0x4
-                0x0800143c                        . = ALIGN (0x4)
-                0x0800143c                        PROVIDE (__fini_array_start = .)
+.fini_array     0x0800199c        0x4
+                0x0800199c                        . = ALIGN (0x4)
+                0x0800199c                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x0800143c        0x4 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crtbegin.o
-                0x08001440                        PROVIDE (__fini_array_end = .)
-                0x08001440                        . = ALIGN (0x4)
-                0x08001440                        _sidata = LOADADDR (.data)
+ .fini_array    0x0800199c        0x4 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crtbegin.o
+                0x080019a0                        PROVIDE (__fini_array_end = .)
+                0x080019a0                        . = ALIGN (0x4)
+                0x080019a0                        _sidata = LOADADDR (.data)
 
-.rel.dyn        0x08001440        0x0
- .rel.iplt      0x08001440        0x0 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crtbegin.o
+.rel.dyn        0x080019a0        0x0
+ .rel.iplt      0x080019a0        0x0 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crtbegin.o
 
-.data           0x20000000        0xc load address 0x08001440
+.data           0x20000000        0xc load address 0x080019a0
                 0x20000000                        _sdata = .
  *(.data)
  *(.data*)
@@ -1118,10 +1171,10 @@ LOAD /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-
                 0x2000000c                        . = ALIGN (0x4)
  *fill*         0x20000009        0x3 
 
-.igot.plt       0x2000000c        0x0 load address 0x0800144c
+.igot.plt       0x2000000c        0x0 load address 0x080019ac
  .igot.plt      0x2000000c        0x0 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crtbegin.o
 
-.tdata          0x2000000c        0x0 load address 0x0800144c
+.tdata          0x2000000c        0x0 load address 0x080019ac
  *(.tdata .tdata.* .gnu.linkonce.td.*)
                 0x2000000c                        . = ALIGN (0x4)
                 0x2000000c                        _edata = .
@@ -1138,7 +1191,7 @@ LOAD /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-
                 [!provide]                        PROVIDE (__data_source_end = __tdata_source_end)
                 [!provide]                        PROVIDE (__data_source_size = (__data_source_end - __data_source))
 
-.tbss           0x2000000c        0x0 load address 0x0800144c
+.tbss           0x2000000c        0x0 load address 0x080019ac
                 0x2000000c                        _sbss = .
                 0x2000000c                        __bss_start__ = _sbss
                 [!provide]                        PROVIDE (__bss_start = .)
@@ -1156,7 +1209,7 @@ LOAD /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-
                 [!provide]                        PROVIDE (__arm32_tls_tcb_offset = MAX (0x8, __tls_align))
                 [!provide]                        PROVIDE (__arm64_tls_tcb_offset = MAX (0x10, __tls_align))
 
-.bss            0x2000000c      0x300 load address 0x0800144c
+.bss            0x2000000c      0x7d8 load address 0x080019ac
  *(.bss)
  .bss           0x2000000c       0x1c /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crtbegin.o
  *(.bss*)
@@ -1176,25 +1229,27 @@ LOAD /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-
  .bss.g_bms_dbg
                 0x200001e8      0x124 CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
                 0x200001e8                g_bms_dbg
+ .bss.g_bq_dm   0x2000030c      0x4d8 CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+                0x2000030c                g_bq_dm
  *(COMMON)
-                0x2000030c                        . = ALIGN (0x4)
-                0x2000030c                        _ebss = .
-                0x2000030c                        __bss_end__ = _ebss
+                0x200007e4                        . = ALIGN (0x4)
+                0x200007e4                        _ebss = .
+                0x200007e4                        __bss_end__ = _ebss
                 [!provide]                        PROVIDE (__bss_end = .)
                 [!provide]                        PROVIDE (__bss_size = (__bss_end - __bss_start))
                 [!provide]                        PROVIDE (__non_tls_bss_start = ADDR (.bss))
 
 ._user_heap_stack
-                0x2000030c      0x604 load address 0x0800144c
-                0x20000310                        . = ALIGN (0x8)
- *fill*         0x2000030c        0x4 
+                0x200007e4      0x604 load address 0x080019ac
+                0x200007e8                        . = ALIGN (0x8)
+ *fill*         0x200007e4        0x4 
                 [!provide]                        PROVIDE (end = .)
-                0x20000310                        PROVIDE (_end = .)
-                0x20000510                        . = (. + _Min_Heap_Size)
- *fill*         0x20000310      0x200 
-                0x20000910                        . = (. + _Min_Stack_Size)
- *fill*         0x20000510      0x400 
-                0x20000910                        . = ALIGN (0x8)
+                0x200007e8                        PROVIDE (_end = .)
+                0x200009e8                        . = (. + _Min_Heap_Size)
+ *fill*         0x200007e8      0x200 
+                0x20000de8                        . = (. + _Min_Stack_Size)
+ *fill*         0x200009e8      0x400 
+                0x20000de8                        . = ALIGN (0x8)
 
 /DISCARD/
  libc.a:*(*)
@@ -1237,13 +1292,15 @@ LOAD /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-
  .ARM.attributes
                 0x00000287       0x2d CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
  .ARM.attributes
-                0x000002b4       0x1b /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-memcpy.o)
+                0x000002b4       0x2d CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
  .ARM.attributes
-                0x000002cf       0x1d /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crtn.o
+                0x000002e1       0x1b /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-memcpy.o)
+ .ARM.attributes
+                0x000002fc       0x1d /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7-m/nofp/crtn.o
 OUTPUT(BMS-MCU-V1.elf elf32-littlearm)
 LOAD linker stubs
 
-.debug_frame    0x00000000      0x66c
+.debug_frame    0x00000000      0x738
  .debug_frame   0x00000000       0x2c /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-init.o)
  .debug_frame   0x0000002c       0xb0 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-lock.o)
  .debug_frame   0x000000dc       0x5c /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-__call_atexit.o)
@@ -1255,31 +1312,34 @@ LOAD linker stubs
  .debug_frame   0x00000240       0x58 CMakeFiles/BMS-MCU-V1.dir/Src/clock.c.obj
  .debug_frame   0x00000298       0x2c CMakeFiles/BMS-MCU-V1.dir/Src/usb_fs.c.obj
  .debug_frame   0x000002c4      0x118 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
- .debug_frame   0x000003dc      0x210 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
- .debug_frame   0x000005ec       0x58 CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
- .debug_frame   0x00000644       0x28 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-memcpy.o)
+ .debug_frame   0x000003dc      0x234 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
+ .debug_frame   0x00000610       0x58 CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
+ .debug_frame   0x00000668       0xa8 CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
+ .debug_frame   0x00000710       0x28 /Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-memcpy.o)
 
-.debug_info     0x00000000     0x22d0
- .debug_info    0x00000000      0x261 CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
- .debug_info    0x00000261       0x30 CMakeFiles/BMS-MCU-V1.dir/Src/startup_stm32f205xx.S.obj
- .debug_info    0x00000291      0x520 CMakeFiles/BMS-MCU-V1.dir/Src/system_stm32f2xx.c.obj
- .debug_info    0x000007b1      0x3c1 CMakeFiles/BMS-MCU-V1.dir/Src/clock.c.obj
- .debug_info    0x00000b72      0x544 CMakeFiles/BMS-MCU-V1.dir/Src/usb_fs.c.obj
- .debug_info    0x000010b6      0x7bf CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
- .debug_info    0x00001875      0x75c CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
- .debug_info    0x00001fd1      0x2ff CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
+.debug_info     0x00000000     0x2843
+ .debug_info    0x00000000      0x273 CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
+ .debug_info    0x00000273       0x30 CMakeFiles/BMS-MCU-V1.dir/Src/startup_stm32f205xx.S.obj
+ .debug_info    0x000002a3      0x520 CMakeFiles/BMS-MCU-V1.dir/Src/system_stm32f2xx.c.obj
+ .debug_info    0x000007c3      0x3c1 CMakeFiles/BMS-MCU-V1.dir/Src/clock.c.obj
+ .debug_info    0x00000b84      0x544 CMakeFiles/BMS-MCU-V1.dir/Src/usb_fs.c.obj
+ .debug_info    0x000010c8      0x7bf CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
+ .debug_info    0x00001887      0x7d9 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
+ .debug_info    0x00002060      0x2ff CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
+ .debug_info    0x0000235f      0x4e4 CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
 
-.debug_abbrev   0x00000000      0xa10
- .debug_abbrev  0x00000000      0x106 CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
- .debug_abbrev  0x00000106       0x24 CMakeFiles/BMS-MCU-V1.dir/Src/startup_stm32f205xx.S.obj
- .debug_abbrev  0x0000012a      0x122 CMakeFiles/BMS-MCU-V1.dir/Src/system_stm32f2xx.c.obj
- .debug_abbrev  0x0000024c      0x146 CMakeFiles/BMS-MCU-V1.dir/Src/clock.c.obj
- .debug_abbrev  0x00000392       0xf1 CMakeFiles/BMS-MCU-V1.dir/Src/usb_fs.c.obj
- .debug_abbrev  0x00000483      0x21e CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
- .debug_abbrev  0x000006a1      0x1e4 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
- .debug_abbrev  0x00000885      0x18b CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
+.debug_abbrev   0x00000000      0xc00
+ .debug_abbrev  0x00000000      0x108 CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
+ .debug_abbrev  0x00000108       0x24 CMakeFiles/BMS-MCU-V1.dir/Src/startup_stm32f205xx.S.obj
+ .debug_abbrev  0x0000012c      0x122 CMakeFiles/BMS-MCU-V1.dir/Src/system_stm32f2xx.c.obj
+ .debug_abbrev  0x0000024e      0x146 CMakeFiles/BMS-MCU-V1.dir/Src/clock.c.obj
+ .debug_abbrev  0x00000394       0xf1 CMakeFiles/BMS-MCU-V1.dir/Src/usb_fs.c.obj
+ .debug_abbrev  0x00000485      0x21e CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
+ .debug_abbrev  0x000006a3      0x1e5 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
+ .debug_abbrev  0x00000888      0x18b CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
+ .debug_abbrev  0x00000a13      0x1ed CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
 
-.debug_aranges  0x00000000      0x1d0
+.debug_aranges  0x00000000      0x210
  .debug_aranges
                 0x00000000       0x20 CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
  .debug_aranges
@@ -1293,12 +1353,14 @@ LOAD linker stubs
  .debug_aranges
                 0x000000b8       0x58 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
  .debug_aranges
-                0x00000110       0x98 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
+                0x00000110       0xa0 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
  .debug_aranges
-                0x000001a8       0x28 CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
+                0x000001b0       0x28 CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
+ .debug_aranges
+                0x000001d8       0x38 CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
 
 .debug_rnglists
-                0x00000000      0x155
+                0x00000000      0x192
  .debug_rnglists
                 0x00000000       0x13 CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
  .debug_rnglists
@@ -1312,52 +1374,58 @@ LOAD linker stubs
  .debug_rnglists
                 0x00000074       0x56 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
  .debug_rnglists
-                0x000000ca       0x71 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
+                0x000000ca       0x78 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
  .debug_rnglists
-                0x0000013b       0x1a CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
+                0x00000142       0x1a CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
+ .debug_rnglists
+                0x0000015c       0x36 CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
 
-.debug_macro    0x00000000    0x14ce3
- .debug_macro   0x00000000       0xea CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
- .debug_macro   0x000000ea       0x8e CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
- .debug_macro   0x00000178       0x51 CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
- .debug_macro   0x000001c9       0x22 CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
- .debug_macro   0x000001eb       0x1c CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
- .debug_macro   0x00000207       0x22 CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
- .debug_macro   0x00000229       0xeb CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
- .debug_macro   0x00000314      0xe82 CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
- .debug_macro   0x00001196      0x11f CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
- .debug_macro   0x000012b5    0x133fd CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
- .debug_macro   0x000146b2       0x1c CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
- .debug_macro   0x000146ce       0x16 CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
- .debug_macro   0x000146e4       0xbe CMakeFiles/BMS-MCU-V1.dir/Src/system_stm32f2xx.c.obj
- .debug_macro   0x000147a2       0xe5 CMakeFiles/BMS-MCU-V1.dir/Src/clock.c.obj
- .debug_macro   0x00014887       0xd7 CMakeFiles/BMS-MCU-V1.dir/Src/usb_fs.c.obj
- .debug_macro   0x0001495e      0x1a4 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
- .debug_macro   0x00014b02       0x10 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
- .debug_macro   0x00014b12       0x20 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
- .debug_macro   0x00014b32       0xe0 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
- .debug_macro   0x00014c12       0xd1 CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
+.debug_macro    0x00000000    0x14de5
+ .debug_macro   0x00000000       0xf9 CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
+ .debug_macro   0x000000f9       0x8e CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
+ .debug_macro   0x00000187       0x51 CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
+ .debug_macro   0x000001d8       0x22 CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
+ .debug_macro   0x000001fa       0x1c CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
+ .debug_macro   0x00000216       0x22 CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
+ .debug_macro   0x00000238       0xeb CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
+ .debug_macro   0x00000323      0xe82 CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
+ .debug_macro   0x000011a5      0x11f CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
+ .debug_macro   0x000012c4    0x133fd CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
+ .debug_macro   0x000146c1       0x1c CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
+ .debug_macro   0x000146dd       0x16 CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
+ .debug_macro   0x000146f3       0x10 CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
+ .debug_macro   0x00014703       0xbe CMakeFiles/BMS-MCU-V1.dir/Src/system_stm32f2xx.c.obj
+ .debug_macro   0x000147c1       0xe5 CMakeFiles/BMS-MCU-V1.dir/Src/clock.c.obj
+ .debug_macro   0x000148a6       0xd7 CMakeFiles/BMS-MCU-V1.dir/Src/usb_fs.c.obj
+ .debug_macro   0x0001497d      0x1a4 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
+ .debug_macro   0x00014b21       0x10 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
+ .debug_macro   0x00014b31       0x20 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
+ .debug_macro   0x00014b51       0xe0 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
+ .debug_macro   0x00014c31       0xd1 CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
+ .debug_macro   0x00014d02       0xe3 CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
 
-.debug_line     0x00000000     0x266d
- .debug_line    0x00000000      0x3ea CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
- .debug_line    0x000003ea       0x7b CMakeFiles/BMS-MCU-V1.dir/Src/startup_stm32f205xx.S.obj
- .debug_line    0x00000465      0x3ee CMakeFiles/BMS-MCU-V1.dir/Src/system_stm32f2xx.c.obj
- .debug_line    0x00000853      0x4d8 CMakeFiles/BMS-MCU-V1.dir/Src/clock.c.obj
- .debug_line    0x00000d2b      0x442 CMakeFiles/BMS-MCU-V1.dir/Src/usb_fs.c.obj
- .debug_line    0x0000116d      0x819 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
- .debug_line    0x00001986      0x837 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
- .debug_line    0x000021bd      0x4b0 CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
+.debug_line     0x00000000     0x2e38
+ .debug_line    0x00000000      0x40e CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
+ .debug_line    0x0000040e       0x7b CMakeFiles/BMS-MCU-V1.dir/Src/startup_stm32f205xx.S.obj
+ .debug_line    0x00000489      0x3ee CMakeFiles/BMS-MCU-V1.dir/Src/system_stm32f2xx.c.obj
+ .debug_line    0x00000877      0x4d8 CMakeFiles/BMS-MCU-V1.dir/Src/clock.c.obj
+ .debug_line    0x00000d4f      0x442 CMakeFiles/BMS-MCU-V1.dir/Src/usb_fs.c.obj
+ .debug_line    0x00001191      0x819 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
+ .debug_line    0x000019aa      0x911 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
+ .debug_line    0x000022bb      0x4b0 CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
+ .debug_line    0x0000276b      0x6cd CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
 
-.debug_str      0x00000000    0x7ad1c
- .debug_str     0x00000000    0x7ad1c CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
-                              0x775c1 (size before relaxing)
- .debug_str     0x0007ad1c       0xac CMakeFiles/BMS-MCU-V1.dir/Src/startup_stm32f205xx.S.obj
- .debug_str     0x0007ad1c    0x7756a CMakeFiles/BMS-MCU-V1.dir/Src/system_stm32f2xx.c.obj
- .debug_str     0x0007ad1c    0x775fe CMakeFiles/BMS-MCU-V1.dir/Src/clock.c.obj
- .debug_str     0x0007ad1c    0x776f9 CMakeFiles/BMS-MCU-V1.dir/Src/usb_fs.c.obj
- .debug_str     0x0007ad1c    0x7a717 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
- .debug_str     0x0007ad1c    0x776f8 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
- .debug_str     0x0007ad1c    0x774f7 CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
+.debug_str      0x00000000    0x7ae32
+ .debug_str     0x00000000    0x7ae32 CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
+                              0x77617 (size before relaxing)
+ .debug_str     0x0007ae32       0xac CMakeFiles/BMS-MCU-V1.dir/Src/startup_stm32f205xx.S.obj
+ .debug_str     0x0007ae32    0x7756a CMakeFiles/BMS-MCU-V1.dir/Src/system_stm32f2xx.c.obj
+ .debug_str     0x0007ae32    0x775fe CMakeFiles/BMS-MCU-V1.dir/Src/clock.c.obj
+ .debug_str     0x0007ae32    0x776f9 CMakeFiles/BMS-MCU-V1.dir/Src/usb_fs.c.obj
+ .debug_str     0x0007ae32    0x7a717 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
+ .debug_str     0x0007ae32    0x77705 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
+ .debug_str     0x0007ae32    0x774f7 CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
+ .debug_str     0x0007ae32    0x77581 CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
 
 .comment        0x00000000       0x43
  .comment       0x00000000       0x43 CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj
@@ -1368,6 +1436,7 @@ LOAD linker stubs
  .comment       0x00000043       0x44 CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj
  .comment       0x00000043       0x44 CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj
  .comment       0x00000043       0x44 CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj
+ .comment       0x00000043       0x44 CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj
 
 .debug_line_str
                 0x00000000       0x90

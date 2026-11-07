@@ -63,3 +63,20 @@ BOOT0 has a resistor to ground plus a push button to VDD, so it is low by defaul
   writes to 0x3E/0x3F, and possibly an unseal; waiting for the owner's go-ahead.
 - `bq76952-main/` is write-heavy (it reprograms protections and FET options). Used as a
   reference for addresses and protocol only; it must not be run against this board as-is.
+
+## DSG investigation, step 2 - BQ configuration read-out (approved by owner) - 2026-11-07
+- `Src/bq_dm.c` reads BQ subcommands/data memory using the documented 0x3E/0x3F request +
+  0x40/0x60/0x61 reply mechanism. A FIXED table of 28 addresses is the only thing it can
+  request (no function takes an arbitrary address); no CONFIG_UPDATE, unseal, FET control or
+  data-memory write is issued. Replies are validated (checksum + per-byte CRC).
+- Sanity check of the mechanism: DEVICE_NUMBER (0x0001) = 0x7695, as the library states.
+- Each data-memory reply is a 32-byte window starting at the requested address; the first
+  byte(s) are the parameter itself. 3 passes gave identical results (28/28 valid).
+- A first attempt (8-byte capture, older firmware) returned inconsistent data (readback
+  0x3E/0x3F = request + 0x60, no valid checksum). Its CSV was deleted. The cause was not
+  determined; the later full-buffer reads are self-consistent and repeatable.
+- Result CSV: data/bq_config_20261107_132808.csv (written by tools/read_bms_csv.py).
+- Manufacturing Status (0x0057) = 0x0040; FET Status = 0x30 (CHG/PCHG/DSG/PDSG all off).
+  Per the comments in bq76952-main/bq76952.cpp (and TI's example calling FET_ENABLE 0x0022
+  during init), Manufacturing Status bit 4 = FET_EN, which here is 0. NOT yet acted on:
+  the FET_ENABLE subcommand toggles that state and would change the BQ.
