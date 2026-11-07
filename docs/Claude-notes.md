@@ -37,3 +37,16 @@ reason (0 = OK, 1 = HSE, 2 = PLL, 3 = switch failed); USB is not touched.
 ## Boot pins
 BOOT0 has a resistor to ground plus a push button to VDD, so it is low by default
 (boots user flash). Holding the button during reset boots the ST system bootloader.
+
+## BQ76952 first contact over I2C (read-only) - 2026-11-07
+- `Src/i2c_bb.c` is a bit-banged I2C master on PB6 (SCL) / PB7 (SDA): open-drain, no internal
+  pull-ups. Chosen over the F2 hardware I2C block for first bring-up (visible line levels,
+  no peripheral quirks). Hardware I2C1 (AF4) can replace it later.
+- `Src/bms_probe.c` reads only BQ direct-command registers below 0x3E (pointer write, repeated
+  START, read) every 0.5 s. It never writes data/subcommands (0x3E/0x40/0x60) and never
+  touches PC0-PC5 (RST_SHUT, DFETOFF, CFETOFF, DDSG, DCHG, ALERT).
+- Result: SCL/SDA idle high (pull-ups work); the BQ ACKs at 7-bit 0x08; all reads OK.
+- **The BQ is replying with CRC** (each data byte is followed by a CRC-8, poly 0x07, over
+  {0x10, cmd, 0x11, data} for the first byte and over the byte alone for later bytes).
+  Any future driver must append/check CRCs, including on writes.
+- Results live in `g_bms_dbg` (raw bytes + status per register), readable over SWD.

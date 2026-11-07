@@ -1,0 +1,16 @@
+/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/i2c_bb.c:12:20:delay_q	16	static
+/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/i2c_bb.c:18:20:sda_hi	4	static
+/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/i2c_bb.c:19:20:sda_lo	4	static
+/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/i2c_bb.c:20:20:scl_lo	4	static
+/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/i2c_bb.c:21:24:sda_rd	4	static
+/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/i2c_bb.c:22:24:scl_rd	4	static
+/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/i2c_bb.c:25:21:scl_hi	16	static
+/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/i2c_bb.c:35:6:i2c_bb_init	4	static
+/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/i2c_bb.c:53:10:i2c_bb_line_levels	16	static
+/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/i2c_bb.c:58:21:start	16	static
+/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/i2c_bb.c:71:13:stop	8	static
+/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/i2c_bb.c:82:12:write_byte	24	static
+/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/i2c_bb.c:103:12:read_byte	32	static
+/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/i2c_bb.c:126:21:bus_idle_check	8	static
+/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/i2c_bb.c:131:14:i2c_bb_probe	24	static
+/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/i2c_bb.c:144:14:i2c_bb_read	40	static
