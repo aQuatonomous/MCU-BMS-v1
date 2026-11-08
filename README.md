@@ -12,3 +12,10 @@ We are trying to build a program on an STM32F205 that connects to a Battery Mana
 # Notes
 - Pin Mapping is available in /Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/docs
 - STM32 is connected over STM32Cube through ST-Link V2. This is available in run and debug under STM32Cube Devices. Serial ID: 37FF71064E573436D8421743
+
+# Documentation (added 2026-11-08)
+- **[docs/User-Guide.md](docs/User-Guide.md)** — step-by-step: check the system, upload (flash) firmware, read data, write BQ settings, run studies, troubleshooting.
+- **[config/](config/README.md)** — the settings the MCU applies to the BQ at every start-up (edit the CSV, then `python3 tools/bms.py config apply`).
+- **`python3 tools/bms.py status`** — one command that checks every connection. `python3 tools/bms.py --help` lists the rest.
+- [data/README.md](data/README.md) describes the result files; [docs/Claude-notes.md](docs/Claude-notes.md) is the running lab notebook.
+- Note: the *Project Status* bullets above predate the bring-up (the BMS is powered, the clock/USB core and I2C link work, the BQ is read and configured over I2C).

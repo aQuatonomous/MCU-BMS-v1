@@ -1,0 +1,10 @@
+enabled,name,address,bytes,value,ack,meaning,notes
+1,Vcell Mode,0x9304,2,0x8007,,"Real cells = 1, 2, 3 and 16 (bit n = cell n+1). The other inputs are shorted together and are ignored.","TRM SLUUBY2B 13.3.2.19. Board wiring: VC3..VC15 tied to the top of cell 3, VC16 = top of cell 4."
+1,COV Threshold,0x9278,1,84,,"Cell overvoltage trip = 84 x 50.6 mV = 4250.4 mV","Owner window maximum 4250 mV. The permanent-fail SOV (4500 mV) stays above it."
+1,CUV Threshold,0x9275,1,65,,"Cell undervoltage trip = 65 x 50.6 mV = 3289.0 mV","Owner window minimum 3250 mV. The permanent-fail SUV (2200 mV) stays below it."
+1,Enabled Protections A,0x9261,1,0x8C,,"Bit7 SCD + bit3 COV + bit2 CUV enabled (power-up default 0x88)","OCD1/OCD2/OCC and all temperature protections stay OFF (no thermistors attached yet)."
+1,SCD Threshold,0x9286,1,0,,"Index 0 = 10 mV = 10 A at the 1 mOhm sense resistor","Index table: 0=10mV 1=20 2=40 3=60 4=80 5=100 6=125 7=150 8=175 9=200 10=250 11=300 12=350 13=400 14=450 15=500 mV."
+1,SCD Delay,0x9287,1,14,,"14 counts = about 195-210 us (library: ~15 us per count; valid 1-31)","Delay sweep at 10 A with the load: raw 11 was the smallest value that passed 3 of 3; 14 adds margin. DECISION POINT: change here if you want a different margin."
+1,FET Options,0x9308,1,0x1D,,"Power-up default 0x0D plus bit 4 (PDSG_EN): pre-discharge before DSG closes","Bit naming from the BQ76952 library comment on 0x1D."
+1,Predischarge Timeout,0x930E,1,50,,"50 x 10 ms = 500 ms; DSG is forced on when this expires","Pre-discharge is timing-only because the Stop Delta below is 0."
+1,Predischarge Stop Delta,0x930F,1,0,,"0 = voltage check disabled (LD is measured upstream of the ideal diodes and cannot see the pre-charge)","Owner finding."

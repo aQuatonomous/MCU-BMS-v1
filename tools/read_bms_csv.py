@@ -8,20 +8,22 @@ current) is not applied because it has not been verified.
 
 Usage: python3 -I tools/read_bms_csv.py [--out PATH] [--samples N] [--interval SECONDS]
 """
-import argparse, csv, datetime, os, re, subprocess, sys, time
+import argparse, csv, datetime, glob, os, re, subprocess, sys, time
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BUNDLES = os.path.expanduser("~/Library/Application Support/stm32cube/bundles")
-PROG = os.path.join(BUNDLES, "programmer/2.23.0/bin/STM32_Programmer_CLI")
-NM = os.path.join(BUNDLES, "gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-nm")
+PROG = (sorted(glob.glob(os.path.join(BUNDLES, "programmer", "*", "bin", "STM32_Programmer_CLI"))) or ["STM32_Programmer_CLI"])[-1]
+NM = (sorted(glob.glob(os.path.join(BUNDLES, "gnu-tools-for-stm32", "*", "bin", "arm-none-eabi-nm"))) or ["arm-none-eabi-nm"])[-1]
 ELF = os.path.join(ROOT, "build/Debug/BMS-MCU-V1.elf")
-STLINK_SN = "37FF71064E573436D8421743"
+STLINK_SN = os.environ.get("BMS_STLINK_SN", "37FF71064E573436D8421743")
 
 NAMES = {0x00: "ControlStatus", 0x02: "SafetyAlertA", 0x03: "SafetyStatusA", 0x04: "SafetyAlertB",
          0x05: "SafetyStatusB", 0x06: "SafetyAlertC", 0x07: "SafetyStatusC", 0x12: "BatteryStatus",
          0x34: "StackVoltage", 0x36: "PACKpin", 0x38: "LDpin", 0x3A: "CC2Current",
          0x62: "AlarmStatus", 0x64: "AlarmRawStatus", 0x66: "AlarmEnable",
-         0x68: "InternalTemp", 0x7F: "FETStatus"}
+         0x68: "InternalTemp", 0x7F: "FETStatus",
+         0x0A: "PFAlertA", 0x0B: "PFStatusA", 0x0C: "PFAlertB", 0x0D: "PFStatusB",
+         0x0E: "PFAlertC", 0x0F: "PFStatusC", 0x10: "PFAlertD", 0x11: "PFStatusD"}
 UNITS = {"Cell": "mV (per BQ datasheet)", "InternalTemp": "0.1 K (assumed, unverified)",
          "CC2Current": "mA, already gain-applied (DA Config USER_AMPS=01 per library; ~7.5 step = CC Gain)"}
 # Names come from TI's STM32_I2C/BQ769x2Header.h ("#define Name 0xADDR //Group:Sub:Name").
@@ -32,7 +34,7 @@ def load_dm_names():
         m = re.match(r"#define\s+(\w+)\s+(0x[0-9A-Fa-f]+)\s*(?://\s*(.*))?", line)
         if m:
             addr = int(m.group(2), 16)
-            if addr >= 0x9000 or addr in (0x0001, 0x0057):
+            if addr >= 0x9000 or addr in (0x0001, 0x0057, 0x0083, 0x0085, 0x0086, 0x0087):
                 names.setdefault(addr, (m.group(3) or m.group(1)).strip())
     # corrections / additions that are NOT in TI's header (sources noted in Src/bq_dm.c)
     names.update({0x91C6: "Calibration:Current Offset:CC Offset Samples (owner's table)",

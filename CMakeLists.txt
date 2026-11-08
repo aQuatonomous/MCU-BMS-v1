@@ -40,6 +40,7 @@ target_sources(${PROJECT_NAME} PRIVATE
   Src/bq_dm.c
   Src/rst_shut.c
   Src/logger.c
+  Src/bms_autoconfig.c
 )
 
 # Add include directories

@@ -179,6 +179,16 @@ build CMakeFiles/BMS-MCU-V1.dir/Src/logger.c.obj: C_COMPILER__BMS-MCU-V1_unscann
   OBJECT_FILE_DIR = CMakeFiles/BMS-MCU-V1.dir/Src
   TARGET_SUPPORT_DIR = CMakeFiles/BMS-MCU-V1.dir
 
+build CMakeFiles/BMS-MCU-V1.dir/Src/bms_autoconfig.c.obj: C_COMPILER__BMS-MCU-V1_unscanned_Debug /Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/bms_autoconfig.c || cmake_object_order_depends_target_BMS-MCU-V1
+  CONFIG = Debug
+  DEFINES = -DDEBUG -DRTE_DEVICE_STARTUP_STM32F2XX
+  DEP_FILE = CMakeFiles/BMS-MCU-V1.dir/Src/bms_autoconfig.c.obj.d
+  FLAGS = -fdata-sections -ffunction-sections -Wl,--gc-sections -Wno-comment -mcpu=cortex-m3 -mlittle-endian -mthumb -std=gnu11 -fstack-usage -Wall -Wextra -Wpedantic -Wno-unused-parameter -O0 -g3 -ggdb
+  INCLUDES = -I/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Inc
+  OBJECT_DIR = CMakeFiles/BMS-MCU-V1.dir
+  OBJECT_FILE_DIR = CMakeFiles/BMS-MCU-V1.dir/Src
+  TARGET_SUPPORT_DIR = CMakeFiles/BMS-MCU-V1.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target BMS-MCU-V1
@@ -187,7 +197,7 @@ build CMakeFiles/BMS-MCU-V1.dir/Src/logger.c.obj: C_COMPILER__BMS-MCU-V1_unscann
 #############################################
 # Link the executable BMS-MCU-V1.elf
 
-build BMS-MCU-V1.elf: C_EXECUTABLE_LINKER__BMS-MCU-V1_Debug CMakeFiles/BMS-MCU-V1.dir/Src/syscall.c.obj CMakeFiles/BMS-MCU-V1.dir/Src/sysmem.c.obj CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj CMakeFiles/BMS-MCU-V1.dir/Src/startup_stm32f205xx.S.obj CMakeFiles/BMS-MCU-V1.dir/Src/system_stm32f2xx.c.obj CMakeFiles/BMS-MCU-V1.dir/Src/clock.c.obj CMakeFiles/BMS-MCU-V1.dir/Src/usb_fs.c.obj CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj CMakeFiles/BMS-MCU-V1.dir/Src/rst_shut.c.obj CMakeFiles/BMS-MCU-V1.dir/Src/logger.c.obj | stm32f205xe_flash.ld
+build BMS-MCU-V1.elf: C_EXECUTABLE_LINKER__BMS-MCU-V1_Debug CMakeFiles/BMS-MCU-V1.dir/Src/syscall.c.obj CMakeFiles/BMS-MCU-V1.dir/Src/sysmem.c.obj CMakeFiles/BMS-MCU-V1.dir/Src/main.c.obj CMakeFiles/BMS-MCU-V1.dir/Src/startup_stm32f205xx.S.obj CMakeFiles/BMS-MCU-V1.dir/Src/system_stm32f2xx.c.obj CMakeFiles/BMS-MCU-V1.dir/Src/clock.c.obj CMakeFiles/BMS-MCU-V1.dir/Src/usb_fs.c.obj CMakeFiles/BMS-MCU-V1.dir/Src/usb_device.c.obj CMakeFiles/BMS-MCU-V1.dir/Src/i2c_bb.c.obj CMakeFiles/BMS-MCU-V1.dir/Src/bms_probe.c.obj CMakeFiles/BMS-MCU-V1.dir/Src/bq_dm.c.obj CMakeFiles/BMS-MCU-V1.dir/Src/rst_shut.c.obj CMakeFiles/BMS-MCU-V1.dir/Src/logger.c.obj CMakeFiles/BMS-MCU-V1.dir/Src/bms_autoconfig.c.obj | stm32f205xe_flash.ld
   CONFIG = Debug
   FLAGS = -fdata-sections -ffunction-sections -Wl,--gc-sections -Wno-comment
   LINK_FLAGS = -mcpu=cortex-m3 -mlittle-endian -mthumb -T/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/build/Debug/stm32f205xe_flash.ld -Wl,-Map=/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/build/Debug/BMS-MCU-V1.map -u _printf_float --specs=nosys.specs -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group -Wl,-z,max-page-size=8 -Wl,--print-memory-usage

@@ -29,4 +29,8 @@ i2c_status_t i2c_bb_read(uint8_t addr7, uint8_t reg, uint8_t *buf, uint32_t n);
  * The caller supplies any CRC bytes. Used ONLY by bq_dm.c for the fixed read-request table. */
 i2c_status_t i2c_bb_write(uint8_t addr7, uint8_t reg, const uint8_t *buf, uint32_t n);
 
+/* Free a bus left stuck by a slave holding SDA low (9 clocks + STOP). Called automatically when a transfer finds SDA low. */
+int i2c_bb_recover(void);
+extern volatile uint32_t g_i2c_recover_count;
+
 #endif /* I2C_BB_H */

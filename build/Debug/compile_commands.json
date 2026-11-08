@@ -76,5 +76,11 @@
   "command": "\"/Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc\" -DDEBUG -DRTE_DEVICE_STARTUP_STM32F2XX -I/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Inc -fdata-sections -ffunction-sections -Wl,--gc-sections -Wno-comment -mcpu=cortex-m3 -mlittle-endian -mthumb -std=gnu11 -fstack-usage -Wall -Wextra -Wpedantic -Wno-unused-parameter -O0 -g3 -ggdb -o CMakeFiles/BMS-MCU-V1.dir/Src/logger.c.obj -c /Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/logger.c",
   "file": "/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/logger.c",
   "output": "/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/build/Debug/CMakeFiles/BMS-MCU-V1.dir/Src/logger.c.obj"
+},
+{
+  "directory": "/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/build/Debug",
+  "command": "\"/Users/logancalder/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc\" -DDEBUG -DRTE_DEVICE_STARTUP_STM32F2XX -I/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Inc -fdata-sections -ffunction-sections -Wl,--gc-sections -Wno-comment -mcpu=cortex-m3 -mlittle-endian -mthumb -std=gnu11 -fstack-usage -Wall -Wextra -Wpedantic -Wno-unused-parameter -O0 -g3 -ggdb -o CMakeFiles/BMS-MCU-V1.dir/Src/bms_autoconfig.c.obj -c /Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/bms_autoconfig.c",
+  "file": "/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/bms_autoconfig.c",
+  "output": "/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/build/Debug/CMakeFiles/BMS-MCU-V1.dir/Src/bms_autoconfig.c.obj"
 }
 ]

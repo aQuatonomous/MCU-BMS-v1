@@ -7,7 +7,7 @@
 /* Quarter bit period in CPU cycles. 120 MHz / 600 = 5 us -> ~50 kHz after overhead:
  * deliberately slow for first bring-up. */
 #define QUARTER_CYCLES   600UL
-#define STRETCH_TIMEOUT  (120000UL * 2UL)   /* ~2 ms in cycles */
+#define STRETCH_TIMEOUT  (120000UL * 50UL)  /* ~50 ms in cycles (a BQ waking from SLEEP can stretch SCL) */
 
 static inline void delay_q(void)
 {
@@ -123,8 +123,31 @@ static int read_byte(uint8_t *out, int send_ack)
     return 0;
 }
 
+volatile uint32_t g_i2c_recover_count;     /* how many bus recoveries were attempted (readable over SWD) */
+
+/* Standard I2C bus recovery for a slave left holding SDA low mid-byte: with SDA released, clock SCL up to 9 times until
+ * the slave lets go of SDA, then generate a STOP. Returns 1 if both lines are high afterwards. */
+int i2c_bb_recover(void)
+{
+    int i;
+    g_i2c_recover_count++;
+    sda_hi();
+    if (scl_hi() != I2C_OK) { return 0; }
+    delay_q();
+    for (i = 0; i < 9 && !sda_rd(); i++) {
+        scl_lo(); delay_q();
+        (void)scl_hi(); delay_q();
+    }
+    sda_lo(); delay_q();                      /* STOP: SDA rises while SCL is high */
+    (void)scl_hi(); delay_q();
+    sda_hi(); delay_q();
+    return (scl_rd() && sda_rd()) ? 1 : 0;
+}
+
 static i2c_status_t bus_idle_check(void)
 {
+    if (scl_rd() && sda_rd()) { return I2C_OK; }
+    if (scl_rd() && !sda_rd()) { (void)i2c_bb_recover(); }   /* slave holding SDA low: try to free it once */
     return (scl_rd() && sda_rd()) ? I2C_OK : I2C_ERR_BUS_BUSY;
 }
 

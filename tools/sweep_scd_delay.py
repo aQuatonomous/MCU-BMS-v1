@@ -6,8 +6,9 @@ PDSG(500 ms) -> DSG with the load -> watch ~3 s after DSG closes -> PASS (DSG st
 (Alarm SSA set) -> ALL_FETS_OFF. Starts at raw 2 (the current value) and steps +1 (library: ~15 us per count; the
 two library formulas differ by one count, so both interpretations are written to the CSV). Stops when a value
 PASSES 3 times in a row (a passing value that later trips is treated as flaky and the sweep keeps stepping up),
-or at raw 31 (library maximum). Restores the owner's previous setting (delay raw 2, threshold 100 A) at the end.
-Aggregated output: data/scd_delay_sweep.csv ; per-trial detail: data/scd_sweep/trial_*.csv
+or at raw 31 (library maximum). The start-up auto-configuration is PAUSED for the whole sweep (it would otherwise undo the
+delay changes) and, at the end, un-paused and told to check now so the BQ returns to the values in config/bms_settings.csv.
+Aggregated output: data/scd_delay_sweep_<timestamp>.csv ; per-trial detail: data/scd_sweep/<timestamp>/trial_*.csv
 Usage: python3 -I tools/sweep_scd_delay.py [--start 2] [--max 31] [--confirm 3]
 """
 import argparse, csv, os, sys, time
@@ -16,8 +17,9 @@ import run_load_test as L
 
 CFG, SCDD = 0xFE7E0200, 0xFE7E0300
 W, A, words = L.w32, L.addr, L.words
-OUT = os.path.join(L.ROOT, "data", "scd_delay_sweep.csv")
-DET = os.path.join(L.ROOT, "data", "scd_sweep")
+STAMP = time.strftime("%Y%m%d_%H%M%S")
+OUT = os.path.join(L.ROOT, "data", f"scd_delay_sweep_{STAMP}.csv")        # a NEW file every run - never overwrites an earlier result
+DET = os.path.join(L.ROOT, "data", "scd_sweep", STAMP)
 COLS = ["trial", "scd_delay_raw", "delay_us_if_(raw-1)x15", "delay_us_if_rawx15", "threshold_mV", "threshold_A",
         "result", "scd_tripped", "dsg_closed", "ms_pdsg_to_dsg", "ms_pdsg_to_trip", "peak_abs_current_mA", "min_cell_mV", "note"]
 
@@ -104,12 +106,20 @@ def main():
     restore_ok = None
     try:
         say("setup: ALL_FETS_OFF, wait clear, SLEEP_DISABLE, threshold -> index 0 (10 mV = 10 A)")
+        W(A("g_autocfg_pause"), 1)                      # the MCU must not "repair" the settings this study changes
         cmd(1); ok, r = wait_clear()
         if not ok: sys.exit("ABORT: flags did not clear at setup")
         cmd(0)
-        res = cfg_write(CFG, 7)                         # SCD Threshold index 5 -> 0
-        say("threshold write result", res, "(want [1,0,0x9286,5,0,1])")
-        if res[:2] != [1, 0] or res[4] != 0: sys.exit("ABORT: could not set the 10 A threshold")
+        h = words(A("g_autocfg"), 9 + 2 * 32)           # find the live SCD threshold the MCU last read
+        live = None
+        for i in range(h[6]):
+            if (h[9 + 2 * i] & 0xFFFF) == 0x9286: live = (h[9 + 2 * i + 1] >> 16) & 0xFFFF
+        say("live SCD threshold index:", live, "(0 = 10 mV = 10 A)")
+        if live == 5:
+            res = cfg_write(CFG, 7); say("threshold 5 -> 0 result", res, "(want [1,0,0x9286,5,0,1])")
+            if res[:2] != [1, 0] or res[4] != 0: sys.exit("ABORT: could not set the 10 A threshold")
+        elif live != 0:
+            sys.exit(f"ABORT: unexpected SCD threshold index {live}; set it to 0 in config/bms_settings.csv first")
         raw, streak, n = a.start, 0, 0
         while raw <= a.max and n < 60:
             n += 1
@@ -131,15 +141,19 @@ def main():
         else:
             say("end of range / trial limit reached without a confirmed pass")
     finally:
-        say("restore: ALL_FETS_OFF, wait clear, delay -> raw 2, threshold -> index 5 (100 A)")
+        say("restore: ALL_FETS_OFF, wait clear, un-pause the auto-configuration and ask it to check now")
         try:
             cmd(1); ok, r = wait_clear(); cmd(0)
-            r1 = cfg_write(SCDD, 2); r2 = cfg_write(CFG, 6)
-            say("restore results: delay", r1, "| threshold", r2)
-            restore_ok = (r1[:2] == [1, 0] and r1[4] == 2 and r2[:2] == [1, 0] and r2[4] == 5)
+            W(A("g_autocfg_pause"), 0); W(A("g_autocfg_req"), 0xFE7E0500); time.sleep(12)
+            h = words(A("g_autocfg"), 9)                # state, last_result, runs, applied, ...
+            names = {1: "OK_MATCH", 2: "APPLIED"}
+            say("auto-configuration state:", h[0], "last_result:", names.get(h[1], h[1]), "applied:", h[3])
+            restore_ok = h[1] in (1, 2)
         except Exception as e:
             say("RESTORE FAILED:", e); restore_ok = False
-        say("RESTORE", "OK" if restore_ok else "FAILED - CHECK THE BQ CONFIG MANUALLY")
+            try: W(A("g_autocfg_pause"), 0)
+            except Exception: pass
+        say("RESTORE", "OK - BQ is back on the values in config/bms_settings.csv" if restore_ok else "FAILED - CHECK THE BQ CONFIG (python3 tools/bms.py status)")
         f.close()
     say("CSV:", OUT)
 

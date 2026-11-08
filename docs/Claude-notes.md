@@ -265,3 +265,91 @@ BOOT0 has a resistor to ground plus a push button to VDD, so it is low by defaul
 - Sweep CSV quirk: PASS rows carry the note "DSG off at end of window" - an artifact (the script sends ALL_FETS_OFF before its final read).
 - Script restored the previous state: SCD delay raw 2, threshold index 5 (100 A) - verified (RESTORE OK). Not yet applied: 10 A + a chosen
   delay (owner wants 10 A as the SCD limit; delay choice 11 vs 13/14 pending).
+
+## Cell balancing statistics - 2026-11-07
+- Owner note: the cell voltages come from a resistor divider, not real cells, so balancing behaviour here is not representative of a pack.
+- Added read-only table entries (append-only, 94 total): CB_ACTIVE_CELLS 0x0083, CBSTATUS1/2/3 0x0085-0x0087 (never CB_SET_LVL 0x0084)
+  and the balancing config block 0x9335-0x9342. All 94 valid. Data: data/balancing_readout*.csv.
+- BQ balancing status: CB_ACTIVE_CELLS = 0x0000, CBSTATUS1 = 0x0000, CBSTATUS2/3 = all zero (32 bytes each): no cell balancing active, no balancing time.
+  Alarm Raw CB bit (bit 2): 0 in all 4,730 logged samples across 6 logs.
+- Balancing config (raw; names from TI header; units NOT in the references - voltages/deltas look like mV, temps like deg C): Balancing Configuration 0x00,
+  Min Cell Temp -20, Max Cell Temp 60, Max Internal Temp 70, Interval 20, Max Cells 1, Min Cell V (charge) 3900, Min Delta (charge) 40,
+  Stop Delta (charge) 20, Min Cell V (relax) 3900, Min Delta (relax) 40, Stop Delta (relax) 20.
+- Cell spread over 4,730 samples (cells 1,2,3,16): mean 5.6 mV, median 5, max 43; per-cell means 4019.2/4017.0/4016.3/4021.5 mV, stdev ~5.5 mV;
+  Cell 16 is highest in 92% of samples. Cells 4-15 are unconnected (read 0 or 0xFFFF).
+
+## Balancing config vs docs/Balancing-Configs.md - 2026-11-07
+- The owner's guide confirms units (mV, s, deg C) and defaults; every balancing parameter read from the chip matches the guide's defaults/ranges.
+- KEY: Balancing Configuration (0x9335) = 0x00 = "all disabled" (no CB_CHG, no CB_RLX) => autonomous balancing is OFF by configuration, regardless of
+  cell voltages/deltas. (My earlier note that "the 40 mV delta wouldn't trigger" was incomplete.) The guide gives the flag names but NOT their bit positions.
+- To exercise balancing at all: set CB_RLX (no charge current), have a cell >= 3900 mV and a highest-lowest delta >= 40 mV (relax), cell/internal temps inside
+  -20..60 / 70 deg C. Prerequisites not yet checked: thermistor (TS) configuration/readings; Power Config CB_LOOP_SLOW field (bit position unknown; Power Config reads 0x2982).
+
+## Cell-voltage window 3250-4250 mV and fuse (permanent-fail) check - 2026-11-07
+- Owner: no thermistors attached yet; wants cell limits min 3250 mV / max 4250 mV (margin for error; fuses must not blow accidentally).
+  (The owner's addition to this notes file had not been saved to disk when I read it - only the chat text was used.)
+- Read-only additions (append-only table, 111 entries; probe now also reads PF Alert/Status A-D, 0x0A-0x11): Enabled PF A-D, PF alert masks,
+  SUV/SOV threshold+delay, Min Blow Fuse Voltage, Fuse Blow Timeout, TS1-3 config. All valid. Data: data/pf_readout*.csv.
+- On the chip: COV 4351.6 mV (raw 86; ABOVE the 4250 max), CUV 2530 mV (raw 50) and CUV is NOT enabled (Enabled Protections A = 0x88 = SCD+COV).
+  PF: SUV 2200 mV (0x0898), SOV 4500 mV (0x1194) (2-byte mV values by address layout), delays raw 5; Enabled PF A/B/C/D = 0x00/0x00/0x07/0x00;
+  PF Alert/Status A-D = 0; Battery Status PF (bit 12) and FUSE (bit 10) clear. Min Blow Fuse Voltage raw 500, Fuse Blow Timeout raw 30 (units unverified).
+  TS1 Config 0x07 (TI's example calls that "cell temperature"), TS2/TS3 = 0 - no thermistor attached, so temperature protections must stay OFF.
+- Candidate writes (NOT applied, awaiting owner choice): COV raw 84 (4250.4 mV) or 83 (4199.8 mV); CUV raw 65 (3289.0 mV) or 64 (3238.4 mV);
+  enable CUV (Enabled Protections A bit 2: 0x88 -> 0x8C). Scale = 50.6 mV/count (doc + library).
+
+## COV / CUV thresholds written - 2026-11-07
+- Owner asked for the writes (suggested rounding accepted by not objecting): COV Threshold (0x9278) raw 86 (4351.6 mV) -> raw 84 (4250.4 mV);
+  CUV Threshold (0x9275) raw 50 (2530.0 mV) -> raw 65 (3289.0 mV). Guarded writer, read-back verified, RAM only (undo = cfg idx 9 and 11).
+- CUV is still DISABLED (Enabled Protections A stays 0x88). Reason: VCell Mode (0x9304) reads 0x0000, which TI's example comment (main_STM32F103_I2C.c:437)
+  describes as "default of 16 cells"; cells 4-15 are unconnected (read 0 / 0xFFFF), so enabling CUV would very likely trip it at once and block DSG.
+  Enabling needs VCell Mode set to the connected cells first; the references do not give the VCell Mode bit map.
+- COV (enabled) is now at 4250.4 mV; cells are ~4.02 V, no COV flag. PF thresholds SOV 4500 mV / SUV 2200 mV are outside the 3250-4250 window.
+
+## Cell wiring (owner-confirmed) and what it implies - 2026-11-07
+- 4 real cells. VC0 = bottom of cell 1; VC1 = cell 1 top; VC2 = cell 2 top; VC3..VC15 are shorted together at the top of cell 3;
+  VC16 = top of the highest (4th) cell. So the BQ sees real cells 1, 2, 3 and 16 (cell 16 = the 4th real cell); BQ cells 4-15 are 0 V by design
+  (matches the logged 0 / 0xFFFF readings; confirms the earlier data-based inference).
+- Consequence: VCell Mode (0x9304) reads 0x0000 = TI-example "default of 16 cells", so the BQ counts the twelve shorted 0 V inputs as cells.
+  Until VCell Mode selects only the real cells: (a) enabling CUV would trip at once; (b) enabling the PF SUV check (permanent fail, can blow the FUSE)
+  would be dangerous; (c) cell balancing would see a 0 V "lowest cell" (delta ~4 V) and balance continuously once enabled.
+  The VCell Mode bit map is not in the references - needed before any write (a wrong mask could silently drop a real cell from COV / stack).
+
+## Owner-supplied PF / fuse register map (docs/reg-mapping.md) vs the chip - 2026-11-07
+- Protection Configuration (0x925F) = 0x0002: only PF_FETS (bit 1) set. PF_FUSE (bit 4) = 0 => per the owner's TRM extract a permanent failure turns the FETs
+  off but does NOT blow the fuse; FETF_FUSE (bit 8) = 0 and PACK_FUSE (bit 7) = 0 as well. So fuses cannot currently be blown by a PF.
+- Enabled PF A = 0x00 (SUV, SOV, SOCC, SOCD, SOT, SOTF, CUDEP all off); PF B = 0x00 (SCDL, VIMA, VIMR, 2LVL, DFETF, CFETF off); PF C = 0x07 =
+  OTPF + DRMF + IRMF (device memory-integrity checks) only; PF D = 0x00 (map not supplied). PF Status/Alert A-D = 0.
+- The supplied extract does NOT include the VCell Mode (0x9304) bit map, so VCell Mode (still 0x0000 = 16 cells) and therefore CUV enable remain blocked.
+  Correction to my earlier wording: with PF_FUSE = 0 a PF SUV/SOV trip would turn FETs off, not blow the fuse.
+
+## VCell Mode written, CUV enabled, I2C bus hang found and fixed - 2026-11-07
+- TRM (BQ76952_tech_manual.pdf = SLUUBY2B, 13.3.2.19 / Table 13-16, read with a text extractor - pages 184-185): Vcell Mode bit n = Cell n+1 Mode;
+  1 = real cell (protections on), 0 = shorted/interconnect (protections off); if ALL bits are 0 every input counts as a cell (default 0x0000).
+  Owner wiring (real cells 1, 2, 3, 16) => mask 0x8007. Written with the new guarded 2-byte writer (g_bq_vcell_req 0xFE7E0400; undo = |1): 0x0000 -> 0x8007, verified.
+- COV Threshold raw 84 (4250.4 mV) and CUV Threshold raw 65 (3289.0 mV) written earlier; CUV now ENABLED (Enabled Protections A 0x88 -> 0x8C, verified).
+  No CUV/COV/safety flag afterwards, in SLEEP and in NORMAL mode, with cells 4-15 at 0 mV => the shorted inputs are ignored as intended.
+- BUG FOUND: the first CUV-enable attempt failed (result 4: BQ never entered CONFIG_UPDATE - it was in SLEEP) and the I2C bus then stuck with SDA held low by the BQ
+  (MCU latch released, pin low). Likely cause (unproven): my 2 ms clock-stretch timeout abandoned a transfer while the BQ was waking from SLEEP.
+  Fixes: clock-stretch timeout 2 ms -> 50 ms; i2c_bb_recover() (9 clocks + STOP, auto-called when SDA is found stuck low; counter g_i2c_recover_count);
+  config writers now send SLEEP_DISABLE (0x009A) + 20 ms before SET_CFGUPDATE. The bus freed itself on the MCU reset (recovery counter stayed 0). BQ settings were intact (POR bit 0).
+- My quick checks misread empty (BUS_BUSY) config rows as zeros once; the checks now treat INVALID reads as invalid.
+- RAM only: VCell Mode, COV, CUV, CUV-enable, SCD threshold/delay, PDSG settings revert on any BQ reset / power cycle.
+
+## 2026-11-08: connection re-check, start-up configuration, tooling, user guide
+- Re-check found everything linked and healthy, but the BQ had been power-cycled overnight (POR bit set, all our settings back at power-up defaults) -
+  the case the new start-up configuration handles. BMS USB device (1209:0001) is still not enumerating on the Mac.
+- NEW firmware: `Src/bms_autoconfig.c` + `Inc/bms_autoconfig.h`; settings compiled in from `config/bms_settings.csv` (+ `bms_options.csv`) via
+  `tools/gen_config.py` -> `Inc/bms_config_generated.h`. At start (3 s) and every 5 s it reads each setting, writes only differences in one
+  CONFIG_UPDATE session, verifies by read-back. Never enables FETs; does nothing while a FET is on, while logging, or while g_autocfg_pause != 0;
+  never writes on an invalid read. Keep-awake: SLEEP_DISABLE every 5 s (skipped while logging).
+- Settings applied: Vcell Mode 0x8007, COV 84, CUV 65, Enabled Protections A 0x8C, SCD threshold index 0 (10 A), SCD delay 14 (** my recommendation, owner has not
+  confirmed; raw 11 is the minimum that passed 3/3 **), FET Options 0x1D, Predischarge timeout 50, stop delta 0.
+- Tested on hardware: (1) fresh start with the BQ at defaults -> 8 of 9 wrong found, repaired, verified; (2) BQ software reset -> repaired again within ~4 s;
+  (3) pause switch holds off the repair, unpause repairs. Integration: `bms.py arm --yes`, one-trial sweep at raw 14 (PASS, no load) incl. restore via autoconfig.
+- Generator guard rails tested: security key, fuse register without FUSE-OK, out-of-range address, oversize value are all rejected.
+- Tooling: `tools/bms.py` (status/build/flash/config/autoconfig/log/arm/fets-*/bq-reset/loadtest/sweep-scd); scripts find the STM32Cube tools by glob; ST-Link serial
+  overridable with BMS_STLINK_SN; sweep now pauses autoconfig and restores via it, and writes a NEW timestamped CSV each run.
+- MISTAKE + FIX: a one-trial sweep test overwrote data/scd_delay_sweep.csv (the 12-trial result). Reconstructed from the printed table (note column says so);
+  per-trial files were preserved and regrouped under data/scd_sweep/<run>/.
+- Docs: docs/User-Guide.md (step-by-step upload/read/write/studies/troubleshooting), config/README.md, data/README.md, README.md pointer. 51 scratch files in data/ removed.
+- FET_ENABLE note: on this board FET_ENABLE switches the FETs on immediately (pre-discharge then DSG/CHG), so `bms.py arm` is meant for the load DISCONNECTED and ends with ALL_FETS_OFF.

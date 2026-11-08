@@ -1,0 +1,5 @@
+name,value,description
+autoconfig_enabled,1,"1 = the MCU checks the BQ settings above at start-up and repairs them; 0 = never touches the BQ configuration"
+first_run_delay_s,3,"Seconds after MCU start before the first check (lets the BQ and I2C settle). 1-30"
+check_period_s,5,"Seconds between checks while running. This is what repairs the BQ after a BMS power cycle. 1-30"
+keep_awake_period_s,5,"Re-send SLEEP_DISABLE this often so the BQ stays in NORMAL mode (the BQ falls back to SLEEP otherwise). 0 = off. 0-30"

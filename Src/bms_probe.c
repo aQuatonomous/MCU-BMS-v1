@@ -15,7 +15,8 @@ static const struct { uint8_t cmd; uint8_t len; } k_cmds[BMS_NCMDS] = {
     {0x34, 2}, {0x36, 2}, {0x38, 2}, {0x3A, 2},
     {0x62, 2}, {0x64, 2}, {0x66, 2},
     {0x68, 2},
-    {0x7F, 1}
+    {0x7F, 1},
+    {0x0A, 1}, {0x0B, 1}, {0x0C, 1}, {0x0D, 1}, {0x0E, 1}, {0x0F, 1}, {0x10, 1}, {0x11, 1}   /* PF Alert/Status A-D */
 };
 
 volatile bms_dbg_t g_bms_dbg;

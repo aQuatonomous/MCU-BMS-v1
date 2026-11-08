@@ -1,0 +1,4 @@
+/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/bms_autoconfig.c:14:17:secs_to_cycles	16	static
+/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/bms_autoconfig.c:16:6:bms_autoconfig_init	16	static
+/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/bms_autoconfig.c:32:13:run_check	320	static
+/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/bms_autoconfig.c:78:6:bms_autoconfig_service	24	static

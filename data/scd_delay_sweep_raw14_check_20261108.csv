@@ -1,0 +1,2 @@
+trial,scd_delay_raw,delay_us_if_(raw-1)x15,delay_us_if_rawx15,threshold_mV,threshold_A,result,scd_tripped,dsg_closed,ms_pdsg_to_dsg,ms_pdsg_to_trip,peak_abs_current_mA,min_cell_mV,note
+1,14,195,210,10,10,PASS,0,1,480,,15,3999,DSG off at end of window

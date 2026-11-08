@@ -14,14 +14,14 @@ LD / PACK / stack stay raw (unsigned 16-bit); give --pack-scale/--ld-scale/--sta
 scaled columns once the unit is known.
 Usage: python3 -I tools/dump_log_csv.py [--out PATH] [--gain 7.4768] [--offset 0] [--offset-samples 64]
 """
-import argparse, csv, datetime, os, re, subprocess, sys
+import argparse, csv, datetime, glob, os, re, subprocess, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 B = os.path.expanduser("~/Library/Application Support/stm32cube/bundles")
-PROG = os.path.join(B, "programmer/2.23.0/bin/STM32_Programmer_CLI")
-NM = os.path.join(B, "gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-nm")
+PROG = (sorted(glob.glob(os.path.join(B, "programmer", "*", "bin", "STM32_Programmer_CLI"))) or ["STM32_Programmer_CLI"])[-1]
+NM = (sorted(glob.glob(os.path.join(B, "gnu-tools-for-stm32", "*", "bin", "arm-none-eabi-nm"))) or ["arm-none-eabi-nm"])[-1]
 ELF = os.path.join(ROOT, "build/Debug/BMS-MCU-V1.elf")
-SN = "37FF71064E573436D8421743"
+SN = os.environ.get("BMS_STLINK_SN", "37FF71064E573436D8421743")   # override with the BMS_STLINK_SN environment variable
 SAMPLE = 28
 
 

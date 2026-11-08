@@ -14,7 +14,7 @@
  * There is deliberately no function that accepts an arbitrary address. No
  * CONFIG_UPDATE, no unseal, no FET control, no data-memory write is ever issued. */
 
-#define BQ_DM_NENTRIES  78U
+#define BQ_DM_NENTRIES  112U
 
 typedef struct {
     uint16_t cmd;          /* subcommand / data-memory address that was requested        */
@@ -95,7 +95,7 @@ extern volatile uint32_t g_bq_cmd_req;
 extern volatile bq_cmd_res_t g_bq_cmd_res;
 void bq_cmd_service(void);
 
-/* ---- Owner-triggered DATA-MEMORY WRITE (fixed table of 8, RAM only) --------------------
+/* ---- Owner-triggered DATA-MEMORY WRITE (fixed table of 14, RAM only) --------------------
  * The ONLY config writes this firmware can make. Write BQ_CFG_MAGIC_BASE | index to g_bq_cfg_req.
  *   index 0 : FET Options (0x9308) 0x0D -> 0x1D   (sets bit 4; PDSG_EN per the library's own comment)
  *   index 1 : FET Options (0x9308) 0x1D -> 0x0D   (undo)
@@ -105,12 +105,15 @@ void bq_cmd_service(void);
  *   index 5 : Predischarge Stop Delta (0x930F) 0x00 -> 0x32 (undo)
  *   index 6 : SCD Threshold (0x9286) index 0 -> 5  (10 mV -> 100 mV = 10 A -> 100 A at 1 mOhm)
  *   index 7 : SCD Threshold (0x9286) index 5 -> 0  (undo)
+ *   index 8/9   : COV Threshold (0x9278) raw 86 <-> 84 (4351.6 <-> 4250.4 mV)
+ *   index 10/11 : CUV Threshold (0x9275) raw 50 <-> 65 (2530.0 <-> 3289.0 mV)
+ *   index 12/13 : Enabled Protections A (0x9261) 0x88 <-> 0x8C (CUV bit 2 off <-> on)
  * Each entry has an EXPECTED current value: if the live value differs, nothing is written.
  * Sequence: verify current value -> SET_CFGUPDATE (0x0090) and confirm Battery Status bit0 ->
  * write value + checksum -> EXIT_CFGUPDATE (0x0092, always attempted once entered) -> read back.
  * The BQ keeps this only in RAM (OTP writes are blocked); it reverts on any BQ reset / power cycle. */
 #define BQ_CFG_MAGIC_BASE  0xFE7E0200UL
-#define BQ_CFG_COUNT       8U
+#define BQ_CFG_COUNT       14U
 typedef struct {
     uint32_t done;
     uint32_t reason;     /* 0 = written and verified, 1 = bad index, 2 = could not read current value,
@@ -132,5 +135,15 @@ void bq_cfg_service(void);
 #define BQ_SCDD_MAGIC_BASE  0xFE7E0300UL
 extern volatile uint32_t g_bq_scdd_req;
 void bq_scdd_service(void);
+
+/* ---- VCell Mode (0x9304) writer: 0x0000 <-> 0x8007 only (cells 1,2,3,16 real; owner wiring + TRM 13.3.2.19) ---- */
+#define BQ_VCELL_MAGIC_BASE  0xFE7E0400UL
+extern volatile uint32_t g_bq_vcell_req;
+void bq_vcell_service(void);
+
+/* ---- Helpers used by bms_autoconfig.c ---- */
+int bq_dm_read_addr(uint16_t addr, uint8_t nbytes, uint16_t *val);      /* 1 = validated read */
+int bq_cfg_batch_write(const uint16_t *addr, const uint8_t *nbytes, const uint16_t *val, uint32_t n);  /* 0 ok, 4/5 error */
+int bq_send_subcmd(uint16_t cmd);
 
 #endif /* BQ_DM_H */

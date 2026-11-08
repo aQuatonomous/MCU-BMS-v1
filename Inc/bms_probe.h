@@ -25,7 +25,7 @@ typedef struct {
     uint8_t raw[4];       /* raw reply bytes; 0xEE-filled if the read failed */
 } bms_reg_t;
 
-#define BMS_NCMDS  33U
+#define BMS_NCMDS  41U
 
 typedef struct {
     uint32_t pass_count;          /* completed scan passes                     */
