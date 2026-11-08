@@ -38,6 +38,8 @@ target_sources(${PROJECT_NAME} PRIVATE
   Src/i2c_bb.c
   Src/bms_probe.c
   Src/bq_dm.c
+  Src/rst_shut.c
+  Src/logger.c
 )
 
 # Add include directories

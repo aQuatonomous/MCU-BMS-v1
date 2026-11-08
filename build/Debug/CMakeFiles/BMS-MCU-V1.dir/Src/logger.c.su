@@ -1,0 +1,4 @@
+/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/logger.c:17:13:update_clock	24	static
+/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/logger.c:24:17:now_ms	16	static
+/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/logger.c:29:17:rd	24	static
+/Users/logancalder/Documents/Aquatonomous/BMS-MCU-V1/Src/logger.c:36:6:logger_service	32	static
